@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fakavajrus</title>
+</head>
+<body>
+    <style>
+
+
+body {
+            background-color: #272727;
+        }
+
+
+        .fakthebutton{
+            width: 128px;
+            height: 36px;
+            border: 0px;
+            vertical-align: middle;
+            border-radius: 4px;
+            background-color: #979797;
+            transition-duration: 0.25s;
+            margin-top: 20px;
+        }
+        .fakthebutton:hover{
+            background-color: #535353;
+            cursor: pointer;
+            color: white;
+            transform: translateY(-10px);
+        }
+
+        .images{
+            border-radius: 6px;
+            width: 128px;
+            height: 128px;
+            margin-top: 30px;
+        }
+
+        button {
+    transition: transform 0.3s ease;
+}
+
+     
+
+
+
+
+
+/* CSS for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+/* CSS for closing the modal */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* CSS for the video inside the modal */
+#adVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.profilepfp{
+            width: 5.8vh;
+            height: 5.8vh;
+            border-radius: 12px;
+            margin-top: 10px;
+            margin-left: 12px;
+            transition-duration: 0.25s;
+            cursor: pointer;
+        }
+
+        .profilepfp:hover{
+            transform: translateX(10px);
+        }
+
+/* Make the button hidden initially */
+#fullscreenButton {
+  display: none;
+}
+
+
+#character {
+            position: absolute;
+            left: 0;
+            top: 50px;
+        }
+
+        #randomguy {
+    transition: transform 0.25s ease;
+        }
+
+.testl{
+    opacity: 1;
+    float: left;
+}
+
+.div2{
+    width: 30vh;
+    height: 10vh;
+    margin-top: 12px;
+    border-radius: 12px;
+    background-color: #535353;
+}
+
+.testtext{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.charactersdropdownmenu{
+            width: 8vh;
+            height: 60vh;
+            border-radius: 12px;
+            background-color: #535353;
+            float: left;
+            vertical-align: middle;
+            display: flex;
+             flex-direction: column;
+             transition-duration: 0.1s;
+        }
+
+
+        .changeButton{
+            border-radius: 8px;
+            background-color: #45913e;
+            color: white;
+            width: 120px;
+            height: 45px;
+            border: 0px;
+            transition-duration: 0.25s;
+            font-size: 20px;
+            margin-top: 20px;
+
+        }
+
+        .changeButton:hover{
+            background-color: #2d5c29;
+        }
+
+
+
+    </style>
+
+<audio id="coinAudio" src="coin.wav"></audio>
+<audio id="backgroundMusiclol" src="backgroundMusic.mp3"></audio>
+
+<center><h1 class="testtext" style="font-size: 12px; color: red; background-color: black; width: 50%; border-radius: 12px;">apditi soon1!!!11!!!</h1></center>
+
+<center><h1 class="testtext">faks</h1></center>
+  
+
+
+<center><h2 class="testtext" id="cookieValue">0</h2></center>
+<center><img id="randomguy" class="images" src="character12.png"></center>
+
+<center><button class="changeButton" id="change" onclick="changeCharacter()">chinge</button></center>
+
+
+<script>
+
+    
+
+
+const button3 = document.querySelector("button#balls.fakthebutton");
+
+
+const img = document.getElementById("randomguy");
+const cookieValueElement = document.getElementById("cookieValue");
+const coinAudio = document.getElementById("coinAudio");
+let cookieValue = parseInt(localStorage.getItem('cookieValue')) || 0;
+let spacebarPressed = false;
+cookieValueElement.textContent = cookieValue;
+
+// Object to store character images and their corresponding cookie values
+const characterValues = {
+    "character1.png": 1,
+    "character2.png": 2,
+    "character3.png": 3,
+    "character4.png": 4,
+    "character5.png": 5,
+    "character6.png": 6,
+    "character7.png": 7,
+    "character8.png": 8,
+    "character9.png": 9,
+    "character10.png": 10,
+    "character11.png": 11,
+    "character12.png": 12
+};
+
+function moveImageAndIncrementCookieValue() {
+    img.style.transform = "translateY(-30px)";
+    const characterImage = img.src.split("/").pop(); // Get the character image filename
+    const characterValue = characterValues[characterImage] || 0; // Get the cookie value from the object
+    cookieValue += characterValue;
+    cookieValueElement.textContent = cookieValue;
+    coinAudio.currentTime = 0;
+    coinAudio.play();
+    setTimeout(() => {
+        img.style.transform = "translateY(0)";
+    }, 300);
+    localStorage.setItem('cookieValue', cookieValue);
+}
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === " " && !spacebarPressed) {
+        spacebarPressed = true;
+        moveImageAndIncrementCookieValue();
+    }
+});
+
+document.addEventListener("keyup", (event) => {
+    if (event.key === " ") {
+        spacebarPressed = false;
+    }
+});
+
+
+
+function changeCharacter(){
+    const character = document.querySelector('img#randomguy.images');
+const characterList = ['character1.png', 'character2.png', 'character3.png', 'character4.png', 'character5.png', 'character6.png','character7.png','character8.png','character9.png','character10.png','character11.png','character12.png'];
+const randomIndex = Math.floor(Math.random() * characterList.length);
+character.src = characterList[randomIndex];
+
+
+}
+
+
+        
+
+</script>
+
+</body>
+</html>
