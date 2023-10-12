@@ -21,15 +21,15 @@ body {
             border: 0px;
             vertical-align: middle;
             border-radius: 4px;
-            background-color: #979797;
+            background-color: #ff0000;
             transition-duration: 0.25s;
-            margin-top: 20px;
+            margin-top: 5vh;
         }
         .fakthebutton:hover{
             background-color: #535353;
             cursor: pointer;
             color: white;
-            transform: translateY(-10px);
+            transform: translateY(-5px);
         }
 
         .images{
@@ -334,7 +334,11 @@ document.addEventListener("keyup", (event) => {
     }
 });
 
+const click = document.getElementById('fakthebutton')
 
+click.addEventListener("click", function() {
+moveImageAndIncrementCookieValue();
+});
 
 
         // Function to save data to Local Storage
@@ -349,6 +353,8 @@ document.addEventListener("keyup", (event) => {
             var data = localStorage.getItem("userData");
             document.getElementById("displayData").textContent = "Data from Local Storage: " + data;
         }
+
+
 
     
         function moveImageAndIncrementCookieValue() {
@@ -383,6 +389,18 @@ window.onload = function() {
 const purchasedCharacters = loadPurchasedCharacters();
 // Rest of your code here
 };
+
+
+        // Function to perform automatic licks and update the display
+        function autoLick() {
+    const autoLicksPerSecond = 1; // Adjust the number of licks per second as needed
+    cookieValue += autoLicksPerSecond;
+    cookieValueElement.textContent = cookieValue;
+    localStorage.setItem('cookieValue', cookieValue);
+}
+
+// Set up an interval to run the autoLick function every second
+setInterval(autoLick, 1000); // 1000 milliseconds = 1 second
 
 
 
@@ -515,6 +533,8 @@ yngve.addEventListener("click", function() {
 
     const equipButton4 = document.getElementById("equipButton4");
 });
+
+
 
 equipButton4.addEventListener("click", function() {
     const equippedCharacterImage = "BAGT";
