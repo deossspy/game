@@ -191,6 +191,8 @@ display: none;
     display: flex;
     margin-left: 10px; /* Add some margin between the divs */
     gap: 10px;
+    width: fit-content;
+
 }
 
 .characterCardEquipButton{
@@ -212,6 +214,39 @@ margin-top: 0;
     background-color: rgb(133, 91, 0);
 }
 
+body.scroll-lock {
+    overflow: hidden;
+}
+
+/* Hide both horizontal and vertical scrollbars */
+body::-webkit-scrollbar {
+    width: 0.01em;
+    height: 0.001em;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+/* Hide scrollbars for Firefox */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+
+
 
     </style>
 
@@ -226,8 +261,9 @@ margin-top: 0;
 
 <center><h2 class="testtext" id="cookieValue" oninput="saveToLocalStorage()">0</h2></center>
 <center><img id="randomguy" class="images" src="character1.png"></center>
+<center><button class="fakthebutton" id="fakthebutton">pris to fak</button></center>
 
-<div id="test">
+<center><div id="test">
 <div class="characterCard">
     <center><img src="character1.png" class="characterCardProfile"></center>
     <center><h1 class="characterCardText">mario</h1></center>
@@ -272,7 +308,75 @@ margin-top: 0;
     <center><button class="characterCardButton" id="character5">PARCHIS</button></center>
     <center><button class="characterCardEquipButton" id="equipButton5">EKVIP</button></center>
 </div>
+
+<div class="characterCard">
+    <center><img src="character6.png" class="characterCardProfile"></center>
+    <center><h1 class="characterCardText">skrim cid</h1></center>
+    <center><h1 class="characterCardText">10 fpc</h1></center>
+    <center><h1 class="characterCardText">45000</h1></center>
+    <center><button class="characterCardButton" id="character6">PARCHIS</button></center>
+    <center><button class="characterCardEquipButton" id="equipButton6">EKVIP</button></center>
 </div>
+
+</div></center>
+
+
+<center><div id="test">
+    <div class="characterCard">
+        <center><img src="character7.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">imo milvin</h1></center>
+        <center><h1 class="characterCardText">12 fpc</h1></center>
+        <center><h1 class="characterCardText">60000</h1></center>
+        <center><button class="characterCardButton" id="character7">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton7">EKVIP</button></center>
+    </div>
+    
+    <div class="characterCard">
+        <center><img src="character8.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">tajmskyp bangvi</h1></center>
+        <center><h1 class="characterCardText">14 fpc</h1></center>
+        <center><h1 class="characterCardText">100000</h1></center>
+        <center><button class="characterCardButton" id="character8">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton8">EKVIP</button></center>
+    </div>
+    
+    <div class="characterCard">
+        <center><img src="character9.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">imo milvin sistar</h1></center>
+        <center><h1 class="characterCardText">0.1 fpc</h1></center>
+        <center><h1 class="characterCardText">0.01</h1></center>
+        <center><button class="characterCardButton" id="character9">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton9">EKVIP</button></center>
+    </div>
+    
+    <div class="characterCard">
+        <center><img src="character10.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">nyls</h1></center>
+        <center><h1 class="characterCardText">16 fpc</h1></center>
+        <center><h1 class="characterCardText">140000</h1></center>
+        <center><button class="characterCardButton" id="character10">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton10">EKVIP</button></center>
+    </div>
+    
+    <div class="characterCard">
+        <center><img src="character11.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">jinjer</h1></center>
+        <center><h1 class="characterCardText">18 fpc</h1></center>
+        <center><h1 class="characterCardText">180000</h1></center>
+        <center><button class="characterCardButton" id="character11">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton11">EKVIP</button></center>
+    </div>
+    
+    <div class="characterCard">
+        <center><img src="character12.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">mali</h1></center>
+        <center><h1 class="characterCardText">20 fpc</h1></center>
+        <center><h1 class="characterCardText">215000</h1></center>
+        <center><button class="characterCardButton" id="character12">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton12">EKVIP</button></center>
+    </div>
+    
+    </div></center>
 
 <script>
     
@@ -298,7 +402,7 @@ const characterValues = {
     "character6.png": 6,
     "character7.png": 7,
     "character8.png": 8,
-    "character9.png": 9,
+    "character9.png": 0.1,
     "character10.png": 10,
     "character11.png": 11
 };
@@ -325,12 +429,15 @@ document.addEventListener("keydown", (event) => {
     if (event.key === " " && !spacebarPressed) {
         spacebarPressed = true;
         moveImageAndIncrementCookieValue();
+        document.body.classList.add("scroll-lock");
     }
 });
 
 document.addEventListener("keyup", (event) => {
     if (event.key === " ") {
         spacebarPressed = false;
+        setTimeout(1000);
+        document.body.classList.remove("scroll-lock");
     }
 });
 
@@ -354,7 +461,16 @@ moveImageAndIncrementCookieValue();
             document.getElementById("displayData").textContent = "Data from Local Storage: " + data;
         }
 
+        // Function to perform automatic licks and update the display
+function autoLick() {
+    const autoLicksPerSecond = 1; // Adjust the number of licks per second as needed
+    cookieValue += autoLicksPerSecond;
+    cookieValueElement.textContent = cookieValue;
+    localStorage.setItem('cookieValue', cookieValue);
+}
 
+// Set up an interval to run the autoLick function every second
+setInterval(autoLick, 1000); // 1000 milliseconds = 1 second
 
     
         function moveImageAndIncrementCookieValue() {
@@ -391,18 +507,6 @@ const purchasedCharacters = loadPurchasedCharacters();
 };
 
 
-        // Function to perform automatic licks and update the display
-        function autoLick() {
-    const autoLicksPerSecond = 1; // Adjust the number of licks per second as needed
-    cookieValue += autoLicksPerSecond;
-    cookieValueElement.textContent = cookieValue;
-    localStorage.setItem('cookieValue', cookieValue);
-}
-
-// Set up an interval to run the autoLick function every second
-setInterval(autoLick, 1000); // 1000 milliseconds = 1 second
-
-
 
 
 const marioButton = document.querySelector("button#character1.characterCardButton");
@@ -420,6 +524,26 @@ const purchaseButton4 = document.getElementById('character4');
 const pontus = document.querySelector('button#character5.characterCardButton');
 const purchaseButton5 = document.getElementById('character5');
 
+const screamingkid = document.querySelector('button#character6.characterCardButton');
+const purchaseButton6 = document.getElementById('character6');
+
+const melvin = document.querySelector('button#character7.characterCardButton');
+const purchaseButton7 = document.getElementById('character7');
+
+const timeskipyngve = document.querySelector('button#character8.characterCardButton');
+const purchaseButton8 = document.getElementById('character8');
+
+const emo = document.querySelector('button#character9.characterCardButton');
+const purchaseButton9 = document.getElementById('character9');
+
+const nils = document.querySelector('button#character10.characterCardButton');
+const purchaseButton10 = document.getElementById('character10');
+
+const ginger = document.querySelector('button#character11.characterCardButton');
+const purchaseButton11 = document.getElementById('character11');
+
+const melle = document.querySelector('button#character7.characterCardButton');
+const purchaseButton12 = document.getElementById('character12');
 
 
 
@@ -534,8 +658,6 @@ yngve.addEventListener("click", function() {
     const equipButton4 = document.getElementById("equipButton4");
 });
 
-
-
 equipButton4.addEventListener("click", function() {
     const equippedCharacterImage = "BAGT";
     if (purchaseButton4.textContent.includes(equippedCharacterImage)) {
@@ -577,6 +699,215 @@ equipButton5.addEventListener("click", function() {
         alert("bai da fakin kiriktir ju brukie");
     }
 });
+
+
+screamingkid.addEventListener("click", function() {
+    const requiredCookies = 45000;
+    if (cookieValue >= requiredCookies) {
+        img.src = "character6.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton6.textContent = "BAGT";
+        screamingkid.disabled = true;
+        equipButton6.disabled = true;
+    } else {
+        alert("jur bruk git mar faks");
+    }
+
+    const equipButton6 = document.getElementById("equipButton6");
+});
+
+equipButton6.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton6.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton6.disabled = false;
+        img.src = 'character6.png';
+    } else {
+        alert("bai da fakin kiriktir ju brukie");
+    }
+});
+
+
+
+melvin.addEventListener("click", function() {
+    const requiredCookies = 60000;
+    if (cookieValue >= requiredCookies) {
+        img.src = "character7.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton7.textContent = "BAGT";
+        melvin.disabled = true;
+        equipButton7.disabled = true;
+    } else {
+        alert("jur bruk git mar faks");
+    }
+
+    const equipButton7 = document.getElementById("equipButton7");
+});
+
+equipButton7.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton7.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton7.disabled = false;
+        img.src = 'character7.png';
+    } else {
+        alert("bai da fakin kiriktir ju brukie");
+    }
+});
+
+
+timeskipyngve.addEventListener("click", function() {
+    const requiredCookies = 100000;
+    if (cookieValue >= requiredCookies) {
+        img.src = "character8.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton8.textContent = "BAGT";
+        timeskipyngve.disabled = true;
+        equipButton8.disabled = true;
+    } else {
+        alert("jur bruk git mar faks");
+    }
+
+    const equipButton8 = document.getElementById("equipButton8");
+});
+
+equipButton8.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton8.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton8.disabled = false;
+        img.src = 'character8.png';
+    } else {
+        alert("bai da fakin kiriktir ju brukie");
+    }
+});
+
+
+
+emo.addEventListener("click", function() {
+    const requiredCookies = 0.01;
+    if (cookieValue >= requiredCookies) {
+        img.src = "character9.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton9.textContent = "BAGT";
+        emo.disabled = true;
+        equipButton9.disabled = true;
+    } else {
+        alert("jur bruk git mar faks");
+    }
+
+    const equipButton9 = document.getElementById("equipButton9");
+});
+
+equipButton9.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton9.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton9.disabled = false;
+        img.src = 'character9.png';
+    } else {
+        alert("bai da fakin kiriktir ju brukie");
+    }
+});
+
+
+
+
+nils.addEventListener("click", function() {
+    const requiredCookies = 140000;
+    if (cookieValue >= requiredCookies) {
+        img.src = "character10.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton10.textContent = "BAGT";
+        nils.disabled = true;
+        equipButton10.disabled = true;
+    } else {
+        alert("jur bruk git mar faks");
+    }
+
+    const equipButton10 = document.getElementById("equipButton10");
+});
+
+equipButton10.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton10.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton10.disabled = false;
+        img.src = 'character10.png';
+    } else {
+        alert("bai da fakin kiriktir ju brukie");
+    }
+});
+
+
+
+ginger.addEventListener("click", function() {
+    const requiredCookies = 180000;
+    if (cookieValue >= requiredCookies) {
+        img.src = "character11.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton11.textContent = "BAGT";
+        ginger.disabled = true;
+        equipButton11.disabled = true;
+    } else {
+        alert("jur bruk git mar faks");
+    }
+
+    const equipButton11 = document.getElementById("equipButton11");
+});
+
+equipButton11.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton11.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton11.disabled = false;
+        img.src = 'character11.png';
+    } else {
+        alert("bai da fakin kiriktir ju brukie");
+    }
+});
+
+
+melle.addEventListener("click", function() {
+    const requiredCookies = 215000;
+    if (cookieValue >= requiredCookies) {
+        img.src = "character12.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton12.textContent = "BAGT";
+        melle.disabled = true;
+        equipButton12.disabled = true;
+    } else {
+        alert("jur bruk git mar faks");
+    }
+
+    const equipButton12 = document.getElementById("equipButton12");
+});
+
+equipButton12.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton12.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton12.disabled = false;
+        img.src = 'character12.png';
+    } else {
+        alert("bai da fakin kiriktir ju brukie");
+    }
+});
+
 
 
 
