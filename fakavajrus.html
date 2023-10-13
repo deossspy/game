@@ -24,6 +24,9 @@ body {
             background-color: #ff0000;
             transition-duration: 0.25s;
             margin-top: 5vh;
+            font: 'Poppins';
+            font-weight: 700;
+            font-size: 17px;
         }
         .fakthebutton:hover{
             background-color: #535353;
@@ -44,6 +47,7 @@ body {
 }
 
     
+
 
 
 
@@ -245,6 +249,20 @@ body {
     scrollbar-color: transparent transparent;
 }
 
+.productCost {
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.4vh;
+    font-size: max-content;
+}
+
+.inputtype{
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 0px;
+    width: 20vh;
+}
 
 
 
@@ -252,6 +270,10 @@ body {
 
 <audio id="coinAudio" src="coin.wav"></audio>
 <audio id="backgroundMusiclol" src="backgroundMusic.mp3"></audio>
+
+<center><p class="productCost" style="font-size: 14px;">chet kod</p></center>
+<center><input class="inputtype" id="nameInput"></center>
+<center><div style="width: 50%; height: 2px; background-color: rgb(205, 205, 205); margin-top: 1.5vh; border-radius: 120px;"></div></center>
 
 
 
@@ -377,6 +399,11 @@ body {
     </div>
     
     </div></center>
+
+    <div style="width: 100%; height: 2px; background-color: rgb(205, 205, 205); margin-top: 200px; border-radius: 120px;"></div>
+    <center><p class="productCost" style="font-size: 2vh;">deo©</p></center>
+    <center><p class="productCost" style="font-size: 1.5vh;">yf ju capy samtin aj will fakin su ju end fak jur matter</p></center>
+    <center><p class="productCost" style="font-size: 1.5vh;">copirigt 2320</p></center>
 
 <script>
     
@@ -908,6 +935,37 @@ equipButton12.addEventListener("click", function() {
     }
 });
 
+
+
+
+
+const nameInput = document.getElementById('nameInput');
+
+// Load the saved name and devCodeUsed from localStorage (if they exist)
+nameInput.value = localStorage.getItem('savedName');
+let devCodeUsed = JSON.parse(localStorage.getItem('devCodeUsed')) || false;
+let bostUsed = JSON.parse(localStorage.getItem('bostUsed')) || false;
+
+nameInput.addEventListener('input', function() {
+  localStorage.setItem('savedName', nameInput.value);
+
+  if (nameInput.value === 'test') {
+    img.style.width = '200px';
+  }
+  if (nameInput.value === 'devCode' && !devCodeUsed) {
+    cookieValue = cookieValue + 25000;
+    devCodeUsed = true;
+    alert('idjot ju us devCode alridi');
+    localStorage.setItem('devCodeUsed', JSON.stringify(devCodeUsed));
+  }
+  if (nameInput.value === 'bost' && !bostUsed) {
+    cookieValue = cookieValue + 25000;
+    bostUsed = true;
+    alert('idjot ju us bost alridi');
+    localStorage.setItem('bostUsed', JSON.stringify(bostUsed));
+  }
+
+});
 
 
 
