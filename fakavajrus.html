@@ -40,11 +40,9 @@ body {
             width: 128px;
             height: 128px;
             margin-top: 30px;
+            transition-duration: 0.25s;
         }
 
-        button {
-    transition: transform 0.3s ease;
-}
 
     
 
@@ -262,6 +260,46 @@ body {
     background-color: #ffffff;
     border: 0px;
     width: 20vh;
+    font-family: 'Poppins';
+}
+
+.normalButton{
+    border: 0px;
+    border-radius: 8px;
+    background-color: #494949;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 14px;
+    width: 16vh;
+    height: 4.3vh;
+    transition-duration: 0.25s;
+    cursor: pointer;
+    font-size: 10px;
+}
+.normalButton:hover{
+    background-color: #ffffff;
+    color: black;
+}
+
+.logout{
+    border: 0px;
+    border-radius: 8px;
+    background-color: #ff0000;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 14px;
+    width: 7vh;
+    height: 2vh;
+    transition-duration: 0.25s;
+    cursor: pointer;
+    font-size: 1vh;
+    margin-top: 10px;
+}
+.logout:hover{
+    background-color: #800000;
+    color: black;
 }
 
 
@@ -270,7 +308,9 @@ body {
 
 <audio id="coinAudio" src="coin.wav"></audio>
 <audio id="backgroundMusiclol" src="backgroundMusic.mp3"></audio>
-
+<center><a href="code-characters.html"><button class="normalButton" id="codeCharacters">kod kiriktirs</button></a>
+    <a href="fun-codes.html"><button class="normalButton" id="funCodes">fan kod</button></center></a>
+    <center><a href="login.html"><button class="logout" id="logout">lag aut</button></a></center>
 <center><p class="productCost" style="font-size: 14px;">chet kod</p></center>
 <center><input class="inputtype" id="nameInput"></center>
 <center><div style="width: 50%; height: 2px; background-color: rgb(205, 205, 205); margin-top: 1.5vh; border-radius: 120px;"></div></center>
@@ -278,7 +318,6 @@ body {
 
 
 <center><h1 class="testtext">faks</h1></center>
-
 
 
 <center><h2 class="testtext" id="cookieValue" oninput="saveToLocalStorage()">0</h2></center>
@@ -400,6 +439,81 @@ body {
     
     </div></center>
 
+
+
+
+
+
+
+
+    <center><div id="test">
+        <div class="characterCard">
+            <center><img src="kencarson.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">kin karson</h1></center>
+            <center><h1 class="characterCardText">30 fpc</h1></center>
+            <center><h1 class="characterCardText">425000</h1></center>
+            <center><button class="characterCardButton" id="kencarson">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="kencarsonEquip">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="playboicarti.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">plaiguy cartman</h1></center>
+            <center><h1 class="characterCardText">50 fpc</h1></center>
+            <center><h1 class="characterCardText">900000</h1></center>
+            <center><button class="characterCardButton" id="playboicarti">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="playboicartiEquip">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="50cent.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">25 cent</h1></center>
+            <center><h1 class="characterCardText">100 fpc</h1></center>
+            <center><h1 class="characterCardText">1800000</h1></center>
+            <center><button class="characterCardButton" id="50cent">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="50centEquip">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="centralcee.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">outer cee</h1></center>
+            <center><h1 class="characterCardText">275 fpc</h1></center>
+            <center><h1 class="characterCardText">3000000</h1></center>
+            <center><button class="characterCardButton" id="centralcee">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="centralceeEquip">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="ye.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">ye</h1></center>
+            <center><h1 class="characterCardText">400 fpc</h1></center>
+            <center><h1 class="characterCardText">10000000</h1></center>
+            <center><button class="characterCardButton" id="ye">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="yeEquip">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="destroylonely.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">fakking lonely</h1></center>
+            <center><h1 class="characterCardText">875 fpc</h1></center>
+            <center><h1 class="characterCardText">25000000</h1></center>
+            <center><button class="characterCardButton" id="destroylonely">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="destroylonelyEquip">EKVIP</button></center>
+        </div>
+        
+        </div></center>
+
+
+
+
+
+
+
+
+
+
+
+
     <div style="width: 100%; height: 2px; background-color: rgb(205, 205, 205); margin-top: 200px; border-radius: 120px;"></div>
     <center><p class="productCost" style="font-size: 2vh;">deo©</p></center>
     <center><p class="productCost" style="font-size: 1.5vh;">yf ju capy samtin aj will fakin su ju end fak jur matter</p></center>
@@ -425,14 +539,29 @@ const characterValues = {
     "character2.png": 2,
     "character3.png": 4,
     "character4.png": 6,
-    "character5.png": 5,
-    "character6.png": 6,
-    "character7.png": 7,
-    "character8.png": 8,
+    "character5.png": 8,
+    "character6.png": 10,
+    "character7.png": 12,
+    "character8.png": 14,
     "character9.png": 0.1,
-    "character10.png": 10,
-    "character11.png": 11
+    "character10.png": 16,
+    "character11.png": 18,
+    "character12.png": 20,
+    "yeat.gif": 1200,
+    "eminem.gif": 1000,
+    "vape.png": -100,
+    "gyatt.png": 100,
+    "chiefkeef.png": 30000,
+    "kencarson.png": 30,
+    "playboicarti.png": 50,
+    "50cent.png": 100,
+    "centralcee.png": 275,
+    "ye.png": 400,
+    "destroylonely.png": 875
+
 };
+
+
 
 const music = document.getElementById('backgroundMusiclol');
 music.play();
@@ -533,6 +662,19 @@ const purchasedCharacters = loadPurchasedCharacters();
 // Rest of your code here
 };
 
+const button = document.getElementById('fakthebutton');
+let lastClickTime = 0;
+const clickDelay = 23;
+button.addEventListener('click', function(event) {
+  const currentTime = new Date().getTime();
+  if (currentTime - lastClickTime < clickDelay) {
+    event.preventDefault();
+    alert('fakin chiiter stap ajuto klik');
+  } else {
+    lastClickTime = currentTime;
+    console.log('Button clicked!');
+  }
+});
 
 
 
@@ -569,8 +711,9 @@ const purchaseButton10 = document.getElementById('character10');
 const ginger = document.querySelector('button#character11.characterCardButton');
 const purchaseButton11 = document.getElementById('character11');
 
-const melle = document.querySelector('button#character7.characterCardButton');
+const melle = document.querySelector('button#character12.characterCardButton');
 const purchaseButton12 = document.getElementById('character12');
+
 
 
 
@@ -937,32 +1080,121 @@ equipButton12.addEventListener("click", function() {
 
 
 
-
-
 const nameInput = document.getElementById('nameInput');
 
 // Load the saved name and devCodeUsed from localStorage (if they exist)
 nameInput.value = localStorage.getItem('savedName');
 let devCodeUsed = JSON.parse(localStorage.getItem('devCodeUsed')) || false;
 let bostUsed = JSON.parse(localStorage.getItem('bostUsed')) || false;
+let risitUsed = JSON.parse(localStorage.getItem('risitUsed')) || false;
+
+
+//codes
 
 nameInput.addEventListener('input', function() {
   localStorage.setItem('savedName', nameInput.value);
 
-  if (nameInput.value === 'test') {
-    img.style.width = '200px';
+
+  if (nameInput.value === 'wide') {
+    img.style.width = '750px';
   }
-  if (nameInput.value === 'devCode' && !devCodeUsed) {
+
+  if (nameInput.value === 'big') {
+    img.style.width = '750px';
+    img.style.height = '750px';
+  }
+
+  if (nameInput.value === 'round') {
+  const imgCards = document.querySelectorAll('img.characterCardProfile');
+  
+  imgCards.forEach(imgCard => {
+    imgCard.style.borderRadius = '50%'; // Sets border radius to make the image round
+    img.style.borderRadius = '50%';
+  });
+}
+
+
+
+  if (nameInput.value === 'yeat🎃') {
+    const divCards = document.querySelectorAll('div.characterCard');
+    const yeatAudio = new Audio("yeat.mp3");
+    const body = document.body;
+    yeatAudio.play();
+    yeatAudio.volume = 1;
+    img.src = "yeat.gif";
+    body.style.background = "url('yeat.gif')";
+    body.style.backgroundSize = "fit";
+    divCards.forEach(divCard => {
+    divCard.style.background = "url('yeat.gif')";
+    nameInput.value = "";
+  });
+}
+
+if (nameInput.value === 'LOVE SOSA') {
+    const divCards = document.querySelectorAll('div.characterCard');
+    const CKAudio = new Audio("chiefkeef.mp3");
+    const body = document.body;
+    CKAudio.play();
+    CKAudio.volume = 1;
+    img.src = "chiefkeef.png";
+    body.style.background = "url('chiefkeef.gif')";
+    body.style.backgroundSize = "fit";
+    divCards.forEach(divCard => {
+    divCard.style.background = "url('chiefkeef.gif')";
+    nameInput.value = "";
+  });
+}
+
+if (nameInput.value === 'eminem😎') {
+    const divCards = document.querySelectorAll('div.characterCard');
+    const body = document.body;
+    img.src = "eminem.gif";
+    const eminemAudio = new Audio("eminem.mp3");
+    eminemAudio.play();
+    eminemAudio.volume = 1;
+    body.style.background = "url('eminem.gif')";
+    body.style.backgroundSize = "fit";
+    divCards.forEach(divCard => {
+    divCard.style.background = "url('eminem.gif')";
+    nameInput.value = "";
+  });
+}
+
+if (nameInput.value === 'vape🤮') {
+    img.src = "vape.png";
+    nameInput.value = "";
+}
+if (nameInput.value === 'cancerstick🤮') {
+    img.src = "vape.png";
+    nameInput.value = "";
+}
+if (nameInput.value === 'gyatt😍') {
+    img.src = "gyatt.png";
+    nameInput.value = "";
+}
+
+
+
+  if (nameInput.value === 'devCode🤑' && !devCodeUsed) {
     cookieValue = cookieValue + 25000;
     devCodeUsed = true;
-    alert('idjot ju us devCode alridi');
+    alert('+25000 faks!!!!');
     localStorage.setItem('devCodeUsed', JSON.stringify(devCodeUsed));
+    nameInput.value = "";
   }
   if (nameInput.value === 'bost' && !bostUsed) {
     cookieValue = cookieValue + 25000;
     bostUsed = true;
-    alert('idjot ju us bost alridi');
+    alert('+25000 faks!!!!');
     localStorage.setItem('bostUsed', JSON.stringify(bostUsed));
+    nameInput.value = "";
+  }
+
+  if (nameInput.value === 'risit' && !risitUsed) {
+    cookieValue = 0;
+    alert('risit camplit pris OK to cumtinju');
+    localStorage.setItem('risitUsed', JSON.stringify(risitUsed));
+    nameInput.value = "";
   }
 
 });
@@ -971,6 +1203,7 @@ nameInput.addEventListener('input', function() {
 
 
 
+ 
 
 
 
