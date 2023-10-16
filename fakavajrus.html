@@ -302,16 +302,38 @@ body {
     color: black;
 }
 
+.reminder {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 10%;
+    background-color: #858585;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: top 0.5s ease;
+}
+
+
 
 
     </style>
 
+<center><div class="reminder" id="reminderPopup">
+    <h1 class="testtext">reminder to save your characters before exiting!</h1>
+</div></center>
+
+
 <audio id="coinAudio" src="coin.wav"></audio>
 <audio id="backgroundMusiclol" src="backgroundMusic.mp3"></audio>
-<center><a href="code-characters.html"><button class="normalButton" id="codeCharacters">kod kiriktirs</button></a>
-    <a href="fun-codes.html"><button class="normalButton" id="funCodes">fan kod</button></center></a>
-    <center><a href="login.html"><button class="logout" id="logout">lag aut</button></a></center>
-    <center><button class="logout" id="saveCharacter" style="width: 20vh; height: 4vh; font-size: 2vh;">pris to sev kiriktir</button></center>
+<center><a href="code-characters.html"><button class="normalButton" id="codeCharacters" style="margin-left: 8vh;">kod kiriktirs</button></a>
+<a href="fun-codes.html"><button class="normalButton" id="funCodes">fan kod</button></a>
+    <a href="login.html"><button class="logout" id="logout" style="float: right;">lag aut</button></a></center>
+<center><button class="logout" id="saveCharacter" style="width: 20vh; height: 4vh; font-size: 2vh; background-color: #2b9bdb;">pris to sev kiriktir</button></center>
+<center>
 <center><p class="productCost" style="font-size: 14px;">chet kod</p></center>
 <center><input class="inputtype" id="nameInput"></center>
 <center><div style="width: 50%; height: 2px; background-color: rgb(205, 205, 205); margin-top: 1.5vh; border-radius: 120px;"></div></center>
@@ -674,6 +696,25 @@ button.addEventListener('click', function(event) {
     console.log('Button clicked!');
   }
 });
+
+
+
+
+// Function to show the reminder popup
+function showReminderPopup() {
+    const reminderPopup = document.getElementById('reminderPopup');
+    const reminderAudio = new Audio('reminderSave.mp3');
+    reminderPopup.style.top = '50px'; // Set the top position to show the popup
+    reminderAudio.play();
+
+    // Hide the popup after 3 seconds (3000 milliseconds)
+    setTimeout(function() {
+        reminderPopup.style.top = '-100px'; // Set the top position to hide the popup
+    }, 3000);
+}
+
+// Set a timer to show the popup every 5 minutes
+setInterval(showReminderPopup, 300000); // 300000 milliseconds = 5 minutes
 
 
 
