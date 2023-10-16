@@ -304,7 +304,7 @@ body {
 
 .reminder {
     position: fixed;
-    top: -100px;
+    top: -300px;
     left: 50%;
     transform: translateX(-50%);
     width: 75%;
@@ -709,12 +709,12 @@ function showReminderPopup() {
 
     // Hide the popup after 3 seconds (3000 milliseconds)
     setTimeout(function() {
-        reminderPopup.style.top = '-100px'; // Set the top position to hide the popup
+        reminderPopup.style.top = '-301px'; // Set the top position to hide the popup
     }, 3000);
 }
 
 // Set a timer to show the popup every 5 minutes
-setInterval(showReminderPopup, 30000); // 300000 milliseconds = 5 minutes
+setInterval(showReminderPopup, 150000); // 300000 milliseconds = 5 minutes
 
 
 
