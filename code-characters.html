@@ -7,18 +7,18 @@
     <title>fakavajrus | code characters</title>
 </head>
 <style>
-    body {
+body {
             background-color: #161616;
         }
 
 
         .fakthebutton{
-            width: 128px;
+            width: 50%;
             height: 36px;
             border: 0px;
             vertical-align: middle;
-            border-radius: 4px;
-            background-color: #ff0000;
+            border-radius: 8px;
+            background-color: #434343;
             transition-duration: 0.25s;
             margin-top: 5vh;
             font: 'Poppins';
@@ -42,59 +42,9 @@
 
 
     
-        .normalButton{
-    border: 0px;
-    border-radius: 8px;
-    background-color: #494949;
-    color: white;
-    font-family: 'Poppins';
-    font-weight: 700;
-    font-size: 14px;
-    width: 16vh;
-    height: 4.3vh;
-    transition-duration: 0.25s;
-    cursor: pointer;
-    font-size: 10px;
-}
-.normalButton:hover{
-    background-color: #ffffff;
-    color: black;
-}
 
 
 
-
-
-/* CSS for the modal */
-.modal {
-display: none;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.8);
-z-index: 1;
-}
-
-/* CSS for closing the modal */
-.close {
-position: absolute;
-top: 10px;
-right: 20px;
-color: white;
-font-size: 28px;
-cursor: pointer;
-}
-
-/* CSS for the video inside the modal */
-#adVideo {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-}
 
 
 .profilepfp{
@@ -111,10 +61,7 @@ height: 100%;
             transform: translateX(10px);
         }
 
-/* Make the button hidden initially */
-#fullscreenButton {
-display: none;
-}
+
 
 
 #character {
@@ -165,7 +112,9 @@ display: none;
 
 .characterCard:hover{
     background-color: rgb(32,32,32);
+    /*transform: perspective(1000px) rotateY(-45deg); /* Apply a 3D rotation effect on hover */
 }
+
 
 .characterCardProfile{
     width: 20vh;
@@ -187,12 +136,93 @@ display: none;
     cursor: pointer;
     font-size: 1.3vh;
     font-weight: 700;
+    transform-origin: center;
 }
 
 .characterCardButton:hover{
-    transition-duration: 0.25s;
+
     background-color: #416a3a;
 }
+
+
+
+.specialCard {
+    width: 30vh;
+    height: 45vh;
+    background: linear-gradient(45deg, rgba(255, 85, 85, 0.5), rgb(255, 105, 85), rgba(255, 85, 85, 0.5));
+  /*  background: linear-gradient(45deg, rgba(255, 223, 85, 0.5), rgba(255, 223, 85, 1), rgba(255, 223, 85, 0.5)); */
+    border-radius: 0.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background-position 0.3s ease; /* Add a smooth transition for background-position */
+    margin-top: 13vh;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(255, 85, 85, 0.5);
+    transform: translateZ(0); /* Trigger GPU acceleration */
+    background-size: 200% 100%; /* Make the background cover a larger area */
+}
+
+.specialCard:hover {
+    animation: shine 2s infinite linear;
+    background-position: 100% 0; /* Adjust initial background position on hover */
+}
+
+
+
+
+.specialCardButton {
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    width: 25vh;
+    height: 4vh;
+    border-radius: 12px;
+    border: 0px;
+    background: linear-gradient(45deg, rgba(255, 223, 85, 0.5), rgba(255, 223, 85, 1), rgba(255, 223, 85, 0.5));
+    transition-duration: 0.25s;
+    cursor: pointer;
+    font-size: 1.3vh;
+    font-weight: 700;
+    transform-origin: center;
+}
+
+.specialCardButton:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+
+.specialCardEquipButton{
+margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    width: 25vh;
+    height: 4vh;
+    border-radius: 12px;
+    border: 0px;
+    background: linear-gradient(45deg, rgba(255, 223, 85, 0.5), rgba(255, 223, 85, 1), rgba(255, 223, 85, 0.5));
+    transition-duration: 0.25s;
+    cursor: pointer;
+    font-size: 1.3vh;
+    font-weight: 700;
+    margin-top: 1vh;
+}
+
+.specialCardEquipButton:hover{
+    background-color: rgb(0, 0, 0);
+}
+
+.specialCardText{
+    color: rgb(49, 49, 49);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.4vh;
+    font-size: max-content;
+}
+
+
+
+
 
 .characterCardText{
     color: rgb(255, 255, 255);
@@ -276,6 +306,60 @@ body {
     width: 20vh;
     font-family: 'Poppins';
 }
+
+.normalButton{
+    border: 0px;
+    border-radius: 8px;
+    background-color: #494949;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 14px;
+    width: 16vh;
+    height: 4.3vh;
+    transition-duration: 0.25s;
+    cursor: pointer;
+    font-size: 10px;
+}
+.normalButton:hover{
+    background-color: #ffffff;
+    color: black;
+}
+
+.logout{
+    border: 0px;
+    border-radius: 8px;
+    background-color: #ff0000;
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 14px;
+    width: 7vh;
+    height: 2vh;
+    transition-duration: 0.25s;
+    cursor: pointer;
+    font-size: 1vh;
+    margin-top: 10px;
+}
+.logout:hover{
+    background-color: #800000;
+    color: black;
+}
+
+.reminder {
+    position: fixed;
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 10%;
+    background-color: #858585;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: top 0.5s ease;
+}
 </style>
 <body>
 
@@ -311,19 +395,21 @@ updateCookieValue();
 
         </script>
 
+        <center><h1 class="testtext" style="margin-top: 10vh;">luh kod kiriktirs</h1></center>
+
         
 
     <center><div id="test">
-        <div class="characterCard">
+        <div class="specialCard">
             <center><img src="chiefkeef.png" class="characterCardProfile"></center>
-            <center><h1 class="characterCardText">CHIEF KEEF</h1></center>
-            <center><h1 class="characterCardText">30000 fpc</h1></center>
-            <center><h1 class="characterCardText">👀CODE👀</h1></center>
-            <center><button class="characterCardButton" id="CHIEFKEEF">RIVIL DA KOD</button></center>
-            <center><button class="characterCardEquipButton" id="CHIEFKEEFEQUIP">WATAFAK</button></center>
+            <center><h1 class="specialCardText">CHIEF KEEF</h1></center>
+            <center><h1 class="specialCardText">30000 fpc</h1></center>
+            <center><h1 class="specialCardText">👀CODE👀</h1></center>
+            <center><button class="specialCardButton" id="CHIEFKEEF">RIVIL DA KOD</button></center>
+            <center><button class="specialCardEquipButton" id="CHIEFKEEFEQUIP">WATAFAK</button></center>
         </div>
         <script>
-            const chiefkeef = document.querySelector('button#CHIEFKEEF.characterCardButton');
+            const chiefkeef = document.querySelector('button#CHIEFKEEF.specialCardButton');
             const purchaseButtonCK = document.getElementById('CHIEFKEEFEQUIP');
         
             chiefkeef.addEventListener("click", function() {
@@ -333,16 +419,36 @@ updateCookieValue();
                 alert('THESE BITCHES LOVE SOSA, O END OR NO END');
             });
         </script>
-        <div class="characterCard">
-            <center><img src="yeat.gif" class="characterCardProfile"></center>
-            <center><h1 class="characterCardText">YËÄT</h1></center>
-            <center><h1 class="characterCardText">1200 fpc</h1></center>
-            <center><h1 class="characterCardText">👀CODE👀</h1></center>
-            <center><button class="characterCardButton" id="YEAT">RIVIL DA KOD</button></center>
-            <center><button class="characterCardEquipButton" id="YEATEQUIP">GIMME</button></center>
+        <div class="specialCard">
+            <center><img src="randomGirl.png" class="characterCardProfile" style=" object-fit: cover;"></center>
+            <center><h1 class="specialCardText">random gurl</h1></center>
+            <center><h1 class="specialCardText">20000 fpc</h1></center>
+            <center><h1 class="specialCardText">👀CODE👀</h1></center>
+            <center><button class="specialCardButton" id="GIRL">RIVIL DA KOD</button></center>
+            <center><button class="specialCardEquipButton" id="GIRLEQUIP">DAAAMN</button></center>
         </div>
         <script>
-            const yeat = document.querySelector('button#YEAT.characterCardButton');
+            const girl = document.querySelector('button#GIRL.specialCardButton');
+            const purchaseButtonGIRL = document.getElementById('GIRLEQUIP');
+        
+            girl.addEventListener("click", function() {
+                alert('fak ju aks deo');
+            });
+            purchaseButtonGIRL.addEventListener("click", function() {
+                alert('o lala');
+            });
+        </script>
+    
+        <div class="specialCard">
+            <center><img src="yeat.gif" class="characterCardProfile"></center>
+            <center><h1 class="specialCardText">YËÄT</h1></center>
+            <center><h1 class="specialCardText">1200 fpc</h1></center>
+            <center><h1 class="specialCardText">👀CODE👀</h1></center>
+            <center><button class="specialCardButton" id="YEAT">RIVIL DA KOD</button></center>
+            <center><button class="specialCardEquipButton" id="YEATEQUIP">GIMME</button></center>
+        </div>
+        <script>
+            const yeat = document.querySelector('button#YEAT.specialCardButton');
             const purchaseButtonYEAT = document.getElementById('YEATEQUIP');
         
             yeat.addEventListener("click", function() {
@@ -352,17 +458,19 @@ updateCookieValue();
                 alert('BIG FAKS');
             });
                 </script>
+
         
-        <div class="characterCard">
+        
+        <div class="specialCard">
             <center><img src="eminem.gif" class="characterCardProfile"></center>
-            <center><h1 class="characterCardText">EMINEM</h1></center>
-            <center><h1 class="characterCardText">1000 fpc</h1></center>
-            <center><h1 class="characterCardText">👀CODE👀</h1></center>
-            <center><button class="characterCardButton" id="EMINEM">RIVIL DA KOD</button></center>
-            <center><button class="characterCardEquipButton" id="EMINEMEQUIP">PLS GIV</button></center>
+            <center><h1 class="specialCardText">EMINEM</h1></center>
+            <center><h1 class="specialCardText">1000 fpc</h1></center>
+            <center><h1 class="specialCardText">👀CODE👀</h1></center>
+            <center><button class="specialCardButton" id="EMINEM">RIVIL DA KOD</button></center>
+            <center><button class="specialCardEquipButton" id="EMINEMEQUIP">PLS GIV</button></center>
         </div>
         <script>
-            const eminem = document.querySelector('button#EMINEM.characterCardButton');
+            const eminem = document.querySelector('button#EMINEM.specialCardButton');
             const purchaseButtonEMINEM = document.getElementById('EMINEMEQUIP');
         
             eminem.addEventListener("click", function() {
@@ -373,18 +481,38 @@ updateCookieValue();
             });
         </script>
 
+<div class="specialCard">
+    <center><img src="gyatt.png" class="characterCardProfile"></center>
+    <center><h1 class="specialCardText">GYAAAAAAAAATT</h1></center>
+    <center><h1 class="specialCardText">100 fpc</h1></center>
+    <center><h1 class="specialCardText">👀CODE👀</h1></center>
+    <center><button class="specialCardButton" id="GYATT">RIVIL DA KOD</button></center>
+    <center><button class="specialCardEquipButton" id="GYATTEQUIP">O LALA BIG BUNDA</button></center>
+</div>
+<script>
+    const gyatt = document.querySelector('button#GYATT.specialCardButton');
+    const purchaseButtonGYATT = document.getElementById('GYATTEQUIP');
 
+    gyatt.addEventListener("click", function() {
+        alert('fak ju aks deo');
+    });
+    purchaseButtonGYATT.addEventListener("click", function() {
+        alert('GYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATT');
+    });
+</script>
+</div></center>
 
-        <div class="characterCard">
+<center><div id="test">
+        <div class="specialCard">
             <center><img src="vape.png" class="characterCardProfile"></center>
-            <center><h1 class="characterCardText">KINCIR STYKK</h1></center>
-            <center><h1 class="characterCardText">-100 fpc</h1></center>
-            <center><h1 class="characterCardText">👀CODE👀</h1></center>
-            <center><button class="characterCardButton" id="VAPE">RIVIL DA KOD</button></center>
-            <center><button class="characterCardEquipButton" id="VAPEEQUIP">HARAM</button></center>
+            <center><h1 class="specialCardText">KINCIR STYKK</h1></center>
+            <center><h1 class="specialCardText">-100 fpc</h1></center>
+            <center><h1 class="specialCardText">👀CODE👀</h1></center>
+            <center><button class="specialCardButton" id="VAPE">RIVIL DA KOD</button></center>
+            <center><button class="specialCardEquipButton" id="VAPEEQUIP">HARAM</button></center>
         </div>
         <script>
-            const vape = document.querySelector('button#VAPE.characterCardButton');
+            const vape = document.querySelector('button#VAPE.specialCardButton');
             const purchaseButtonVAPE = document.getElementById('VAPEEQUIP');
         
             vape.addEventListener("click", function() {
@@ -395,25 +523,6 @@ updateCookieValue();
             });
         </script>
 
-        <div class="characterCard">
-            <center><img src="gyatt.png" class="characterCardProfile"></center>
-            <center><h1 class="characterCardText">GYAAAAAAAAATT</h1></center>
-            <center><h1 class="characterCardText">100 fpc</h1></center>
-            <center><h1 class="characterCardText">👀CODE👀</h1></center>
-            <center><button class="characterCardButton" id="GYATT">RIVIL DA KOD</button></center>
-            <center><button class="characterCardEquipButton" id="GYATTEQUIP">O LALA BIG BUNDA</button></center>
-        </div>
-        <script>
-            const gyatt = document.querySelector('button#GYATT.characterCardButton');
-            const purchaseButtonGYATT = document.getElementById('GYATTEQUIP');
-        
-            gyatt.addEventListener("click", function() {
-                alert('fak ju aks deo');
-            });
-            purchaseButtonGYATT.addEventListener("click", function() {
-                alert('GYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATT');
-            });
-        </script>
         
         
         </div></center>
