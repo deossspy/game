@@ -311,6 +311,7 @@ body {
 <center><a href="code-characters.html"><button class="normalButton" id="codeCharacters">kod kiriktirs</button></a>
     <a href="fun-codes.html"><button class="normalButton" id="funCodes">fan kod</button></center></a>
     <center><a href="login.html"><button class="logout" id="logout">lag aut</button></a></center>
+    <center><button class="logout" id="saveCharacter" style="width: 20vh; height: 4vh; font-size: 2vh;">pris to sev kiriktir</button></center>
 <center><p class="productCost" style="font-size: 14px;">chet kod</p></center>
 <center><input class="inputtype" id="nameInput"></center>
 <center><div style="width: 50%; height: 2px; background-color: rgb(205, 205, 205); margin-top: 1.5vh; border-radius: 120px;"></div></center>
@@ -323,6 +324,7 @@ body {
 <center><h2 class="testtext" id="cookieValue" oninput="saveToLocalStorage()">0</h2></center>
 <center><img id="randomguy" class="images" src="character1.png"></center>
 <center><button class="fakthebutton" id="fakthebutton">pris to fak</button></center>
+
 
 <center><div id="test">
 <div class="characterCard">
@@ -567,35 +569,32 @@ const music = document.getElementById('backgroundMusiclol');
 music.play();
 
 
-
-function moveImageAndIncrementCookieValue() {
-    img.style.transform = "translateY(-30px)";
-    const characterImage = img.src.split("/").pop(); // Get the character image filename
-    const characterValue = characterValues[characterImage] || 0; // Get the cookie value from the object
-    cookieValue += characterValue;
-    cookieValueElement.textContent = cookieValue;
-    coinAudio.currentTime = 0;
-    coinAudio.play();
-    setTimeout(() => {
-        img.style.transform = "translateY(0)";
-    }, 300);
-}
+const SPACEBAR_DELAY_MS = 9.7; // Define the time interval (in milliseconds) between spacebar presses
+let lastSpacebarPressTime = 0;
 
 document.addEventListener("keydown", (event) => {
-    if (event.key === " " && !spacebarPressed) {
-        spacebarPressed = true;
-        moveImageAndIncrementCookieValue();
-        document.body.classList.add("scroll-lock");
+    if (event.key === " ") { // Check if the pressed key is the spacebar
+        const currentTime = Date.now();
+        
+        if (!spacebarPressed && currentTime - lastSpacebarPressTime >= SPACEBAR_DELAY_MS) {
+            // Allow spacebar press if it's not already pressed and the time interval has passed
+            spacebarPressed = true; // Set spacebarPressed to true
+            moveImageAndIncrementCookieValue(); // Execute your function
+            document.body.classList.add("scroll-lock"); // Add the "scroll-lock" class
+            lastSpacebarPressTime = currentTime; // Update the last press time
+        } else {
+            alert("haha try again"); // Show an alert if the spacebar is pressed too quickly
+        }
     }
 });
 
 document.addEventListener("keyup", (event) => {
     if (event.key === " ") {
         spacebarPressed = false;
-        setTimeout(1000);
-        document.body.classList.remove("scroll-lock");
+        document.body.classList.remove("scroll-lock"); // Remove the "scroll-lock" class when releasing the spacebar
     }
 });
+
 
 const click = document.getElementById('fakthebutton')
 
@@ -1078,6 +1077,41 @@ equipButton12.addEventListener("click", function() {
     }
 });
 
+// Check if characters should be saved to local storage
+document.getElementById("saveCharacter").addEventListener("click", function() {
+    const characterButtons = document.querySelectorAll(".characterCardButton");
+
+    // Create an array to store the saved characters' IDs
+    const savedCharacterIds = [];
+
+    characterButtons.forEach(button => {
+        if (button.textContent === "BAGT") {
+            const characterId = button.id.replace("character", "");
+            savedCharacterIds.push(characterId);
+        }
+    });
+
+    // Save the character IDs to local storage
+    localStorage.setItem("savedCharacterIds", JSON.stringify(savedCharacterIds));
+});
+
+// Check if characters should be loaded from local storage
+document.addEventListener("DOMContentLoaded", function() {
+    const savedCharacterIds = JSON.parse(localStorage.getItem("savedCharacterIds"));
+
+    if (savedCharacterIds) {
+        savedCharacterIds.forEach(characterId => {
+            const button = document.getElementById(`character${characterId}`);
+            if (button) {
+                button.textContent = "BAGT";
+                button.disabled = true;
+            }
+        });
+    }
+});
+
+
+
 
 
 const nameInput = document.getElementById('nameInput');
@@ -1102,6 +1136,11 @@ nameInput.addEventListener('input', function() {
   if (nameInput.value === 'big') {
     img.style.width = '750px';
     img.style.height = '750px';
+  }
+
+  if (nameInput.value === 'small') {
+    img.style.width = '128px';
+    img.style.height = '128px';
   }
 
   if (nameInput.value === 'round') {
