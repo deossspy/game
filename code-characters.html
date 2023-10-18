@@ -360,6 +360,29 @@ body {
     border-radius: 8px;
     transition: top 0.5s ease;
 }
+
+.greenCard{
+    width: 30vh;
+    height: 45vh;
+    background: linear-gradient(45deg, rgba(133, 255, 85, 0.5), rgb(119, 255, 85), rgba(133, 255, 85, 0.5));
+    border-radius: 0.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background-position 0.3s ease; /* Add a smooth transition for background-position */
+    margin-top: 13vh;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(255, 223, 85, 0.5);
+    transform: translateZ(0); /* Trigger GPU acceleration */
+    background-size: 200% 100%; /* Make the background cover a larger area */
+}
+
+.greenCard:hover {
+    animation: shine 2s infinite linear;
+    background-position: 100% 0; /* Adjust initial background position on hover */
+}
 </style>
 <body>
 
@@ -401,6 +424,26 @@ updateCookieValue();
 
     <center><div id="test">
         <div class="specialCard">
+            <center><img src="rat.png" class="characterCardProfile" style=" object-fit: cover;"></center>
+            <center><h1 class="specialCardText">rat</h1></center>
+            <center><h1 class="specialCardText">200000 fpc</h1></center>
+            <center><h1 class="specialCardText">👀CODE👀</h1></center>
+            <center><button class="specialCardButton" id="RAT">RIVIL DA KOD</button></center>
+            <center><button class="specialCardEquipButton" id="RATEQUIP">WAT</button></center>
+        </div>
+        <script>
+            const rat = document.querySelector('button#RAT.specialCardButton');
+            const purchaseButtonRAT = document.getElementById('GIRLEQUIP');
+        
+            rat.addEventListener("click", function() {
+                alert('fak ju aks deo');
+            });
+            purchaseButtonRAT.addEventListener("click", function() {
+                alert('o lala');
+            });
+        </script>
+        
+        <div class="specialCard">
             <center><img src="chiefkeef.png" class="characterCardProfile"></center>
             <center><h1 class="specialCardText">CHIEF KEEF</h1></center>
             <center><h1 class="specialCardText">30000 fpc</h1></center>
@@ -421,7 +464,7 @@ updateCookieValue();
         </script>
         <div class="specialCard">
             <center><img src="randomGirl.png" class="characterCardProfile" style=" object-fit: cover;"></center>
-            <center><h1 class="specialCardText">random gurl</h1></center>
+            <center><h1 class="specialCardText">random latina</h1></center>
             <center><h1 class="specialCardText">20000 fpc</h1></center>
             <center><h1 class="specialCardText">👀CODE👀</h1></center>
             <center><button class="specialCardButton" id="GIRL">RIVIL DA KOD</button></center>
@@ -481,28 +524,30 @@ updateCookieValue();
             });
         </script>
 
-<div class="specialCard">
-    <center><img src="gyatt.png" class="characterCardProfile"></center>
-    <center><h1 class="specialCardText">GYAAAAAAAAATT</h1></center>
-    <center><h1 class="specialCardText">100 fpc</h1></center>
-    <center><h1 class="specialCardText">👀CODE👀</h1></center>
-    <center><button class="specialCardButton" id="GYATT">RIVIL DA KOD</button></center>
-    <center><button class="specialCardEquipButton" id="GYATTEQUIP">O LALA BIG BUNDA</button></center>
-</div>
-<script>
-    const gyatt = document.querySelector('button#GYATT.specialCardButton');
-    const purchaseButtonGYATT = document.getElementById('GYATTEQUIP');
-
-    gyatt.addEventListener("click", function() {
-        alert('fak ju aks deo');
-    });
-    purchaseButtonGYATT.addEventListener("click", function() {
-        alert('GYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATT');
-    });
-</script>
-</div></center>
+</center>
 
 <center><div id="test">
+    <div class="specialCard">
+        <center><img src="gyatt.png" class="characterCardProfile"></center>
+        <center><h1 class="specialCardText">GYAAAAAAAAATT</h1></center>
+        <center><h1 class="specialCardText">100 fpc</h1></center>
+        <center><h1 class="specialCardText">👀CODE👀</h1></center>
+        <center><button class="specialCardButton" id="GYATT">RIVIL DA KOD</button></center>
+        <center><button class="specialCardEquipButton" id="GYATTEQUIP">O LALA BIG BUNDA</button></center>
+    </div>
+    <script>
+        const gyatt = document.querySelector('button#GYATT.specialCardButton');
+        const purchaseButtonGYATT = document.getElementById('GYATTEQUIP');
+    
+        gyatt.addEventListener("click", function() {
+            alert('fak ju aks deo');
+        });
+        purchaseButtonGYATT.addEventListener("click", function() {
+            alert('GYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATT');
+        });
+    </script>
+    
+    
         <div class="specialCard">
             <center><img src="vape.png" class="characterCardProfile"></center>
             <center><h1 class="specialCardText">KINCIR STYKK</h1></center>

@@ -364,12 +364,36 @@ body {
 }
 
 
+.greenCard{
+    width: 30vh;
+    height: 45vh;
+    background: linear-gradient(45deg, rgba(133, 255, 85, 0.5), rgb(119, 255, 85), rgba(133, 255, 85, 0.5));
+    border-radius: 0.8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background-position 0.3s ease; /* Add a smooth transition for background-position */
+    margin-top: 13vh;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(167, 255, 85, 0.5);
+    transform: translateZ(0); /* Trigger GPU acceleration */
+    background-size: 200% 100%; /* Make the background cover a larger area */
+}
+
+.greenCard:hover {
+    animation: shine 2s infinite linear;
+    background-position: 100% 0; /* Adjust initial background position on hover */
+}
+
+
 
 
     </style>
 
 <center><div class="reminder" id="reminderPopup">
-    <h1 class="testtext">reminder to save your characters before exiting!</h1>
+    <h1 class="testtext" style="font-size: 4vh;">reminder to save your characters before exiting!</h1>
 </div></center>
 
 
@@ -742,7 +766,8 @@ const characterValues = {
     "pippi.png": 2750,
     "ronaldo.png": 3000,
     "luhcalmfit.gif": 6000,
-    "randomGirl.png": 20000
+    "randomGirl.png": 20000,
+    "rat.png": 200000
 
 };
 
@@ -876,7 +901,7 @@ function showReminderPopup() {
 }
 
 // Set a timer to show the popup every 5 minutes
-setInterval(showReminderPopup, 150000); // 300000 milliseconds = 5 minutes
+setInterval(showReminderPopup, 60000); // 300000 milliseconds = 5 minutes
 
 
 
