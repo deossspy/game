@@ -774,7 +774,7 @@ const characterValues = {
 
 
 
-const SPACEBAR_DELAY_MS = 9.3; // Define the time interval (in milliseconds) between spacebar presses
+const SPACEBAR_DELAY_MS = 1; // Define the time interval (in milliseconds) between spacebar presses
 let lastSpacebarPressTime = 0;
 
 document.addEventListener("keydown", (event) => {
@@ -788,7 +788,7 @@ document.addEventListener("keydown", (event) => {
             document.body.classList.add("scroll-lock"); // Add the "scroll-lock" class
             lastSpacebarPressTime = currentTime; // Update the last press time
         } else {
-            alert("haha try again"); // Show an alert if the spacebar is pressed too quickly
+            
         }
     }
 });
@@ -1894,6 +1894,15 @@ if (nameInput.value === 'luh girl') {
     const divCards = document.querySelectorAll('div.characterCard, div.specialCard');
     const body = document.body;
     img.src = "randomGirl.png";
+    divCards.forEach(divCard => {
+    nameInput.value = "";
+  });
+}
+
+if (nameInput.value === 'luh ret') {
+    const divCards = document.querySelectorAll('div.characterCard, div.specialCard');
+    const body = document.body;
+    img.src = "rat.png";
     divCards.forEach(divCard => {
     nameInput.value = "";
   });
