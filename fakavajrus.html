@@ -92,7 +92,7 @@ body {
 
 .testtext{
     font-family: 'Poppins';
-    color: rgb(255, 255, 255);
+    color: lime;
 }
 
 
@@ -103,7 +103,7 @@ body {
     width: 30vh;
     height: 45vh;
     background-color: rgb(37, 37, 37);
-    border-radius: 0.8vh;
+    border-radius: 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -355,8 +355,65 @@ body {
     transform: translateX(-50%);
     width: 75%;
     height: 10%;
-    background-color: #858585;
-    color: #ffffff;
+    background-color: #000000;
+    color: lime;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: top 0.5s ease;
+}
+
+.popup {
+    position: fixed;
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 10%;
+    background: linear-gradient(45deg, rgba(73, 134, 49, 0.5), rgb(96, 182, 63), rgba(73, 134, 49, 0.5));
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: top 0.5s ease;
+}
+
+.popupbrokie {
+    position: fixed;
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 10%;
+    background: linear-gradient(45deg, rgba(134, 49, 49, 0.5), rgb(182, 63, 63), #86313180);
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: top 0.5s ease;
+}
+
+
+.popupequip {
+    position: fixed;
+    top: -300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 10%;
+    background: linear-gradient(45deg, rgba(187, 86, 4, 0.5), rgb(255, 145, 0),rgba(187, 86, 4, 0.5));
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: top 0.5s ease;
+}
+
+.announcement {
+    position: fixed;
+    left: 50%;
+    top: -300px;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 23%;
+    background: linear-gradient(45deg, rgba(4, 37, 187, 0.5), rgb(0, 0, 0),rgba(4, 37, 187, 0.5));
     text-align: center;
     font-size: 18px;
     border-radius: 8px;
@@ -386,22 +443,50 @@ body {
     animation: shine 2s infinite linear;
     background-position: 100% 0; /* Adjust initial background position on hover */
 }
+#hiddenDiv {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
 
 
 
-    </style>
+
+
+    </style> 
 
 <center><div class="reminder" id="reminderPopup">
     <h1 class="testtext" style="font-size: 4vh;">reminder to save your characters before exiting!</h1>
 </div></center>
 
+<center><div class="reminder" id="reminderPopup" style="top: 2%;">
+    <h1 class="testtext" style="font-size: 4vh;">PLAY SAKAVAJRUS</h1>
+</div></center>
+
+<center><div class="popup" id="purchasePopup">
+    <h1 class="testtext" style="font-size: 4vh;">sakasex bagt!!!!!!</h1>
+</div></center>
+
+<center><div class="popupbrokie" id="purchaseDeniedPopup">
+    <h1 class="testtext" style="font-size: 4vh;">brok</h1>
+</div></center>
+
+<center><div class="popupequip" id="equipPopup">
+    <h1 class="testtext" style="font-size: 4vh;">ekvipd!!!</h1>
+</div></center>
+
+<center><div class="popupequip" id="equipPopupDenied">
+    <h1 class="testtext" style="font-size: 4vh;">bai da kiriktir</h1>
+</div></center>
+
+
 
 <audio id="coinAudio" src="coin.wav"></audio>
 <audio id="backgroundMusiclol" src="backgroundMusic.mp3"></audio>
-<center><div style="background: rgb(30, 30, 30); width: 50%; border-radius: 9px;"><center><a href="code-characters.html"><button class="normalButton" id="codeCharacters">kod kiriktirs</button></a>
+<center><div style="background: rgb(30, 30, 30); width: 100%; border-radius: 9px;"><center><a href="code-characters.html"><button class="normalButton" id="codeCharacters">kod kiriktirs</button></a>
 <a href="fun-codes.html"><button class="normalButton" id="funCodes">fan kod</button></a>
-<button class="normalButton" id="saveCharacter" >pris to sev kiriktir</button></center></center></div></center>
+<button class="normalButton" id="funCodes">deli riward</button>
+<button class="normalButton" id="saveCharacter">pris to sev kiriktir</button></center></center></div></center>
 <center>
 <center><p class="productCost" style="font-size: 14px;">chet kod</p></center>
 <center><input class="inputtype" id="nameInput"></center>
@@ -414,65 +499,72 @@ body {
 
 <center><h2 class="testtext" id="cookieValue" oninput="saveToLocalStorage()">0</h2></center>
 <center><img id="randomguy" class="images" src="character1.png"></center>
-<center><button class="fakthebutton" id="fakthebutton">pris to fak</button></center>
+<center><button class="fakthebutton" id="fakthebutton">pris to fak</button>
 
 
-<center><div id="test">
-<div class="characterCard">
-    <center><img src="character1.png" class="characterCardProfile"></center>
-    <center><h1 class="characterCardText">mario</h1></center>
-    <center><h1 class="characterCardText">1 fpc</h1></center>
-    <center><h1 class="characterCardText">FRI</h1></center>
-    <center><button class="characterCardButton" id="character1">PARCHIS</button></center>
-    <center><button class="characterCardEquipButton" id="equipButton1">EKVIP</button></center>
-</div>
 
-<div class="characterCard">
-    <center><img src="character2.png" class="characterCardProfile"></center>
-    <center><h1 class="characterCardText">chin lu</h1></center>
-    <center><h1 class="characterCardText">2 fpc</h1></center>
-    <center><h1 class="characterCardText">1250</h1></center>
-    <center><button class="characterCardButton" id="character2">PARCHIS</button></center>
-    <center><button class="characterCardEquipButton" id="equipButton2">EKVIP</button></center>
-</div>
 
-<div class="characterCard">
-    <center><img src="character3.png" class="characterCardProfile"></center>
-    <center><h1 class="characterCardText">bark</h1></center>
-    <center><h1 class="characterCardText">4 fpc</h1></center>
-    <center><h1 class="characterCardText">4500</h1></center>
-    <center><button class="characterCardButton" id="character3">PARCHIS</button></center>
-    <center><button class="characterCardEquipButton" id="equipButton3">EKVIP</button></center>
-</div>
 
-<div class="characterCard">
-    <center><img src="character4.png" class="characterCardProfile"></center>
-    <center><h1 class="characterCardText">byngve</h1></center>
-    <center><h1 class="characterCardText">6 fpc</h1></center>
-    <center><h1 class="characterCardText">8000</h1></center>
-    <center><button class="characterCardButton" id="character4">PARCHIS</button></center>
-    <center><button class="characterCardEquipButton" id="equipButton4">EKVIP</button></center>
-</div>
+    <center><div id="test">
+        <div class="characterCard">
+            <center><img src="character1.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">mario</h1></center>
+            <center><h1 class="characterCardText">1 fpc</h1></center>
+            <center><h1 class="characterCardText">FRI</h1></center>
+            <center><button class="characterCardButton" id="character1">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton1">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="character2.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">chin lu</h1></center>
+            <center><h1 class="characterCardText">2 fpc</h1></center>
+            <center><h1 class="characterCardText">1250</h1></center>
+            <center><button class="characterCardButton" id="character2">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton2">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="character3.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">bark</h1></center>
+            <center><h1 class="characterCardText">4 fpc</h1></center>
+            <center><h1 class="characterCardText">4500</h1></center>
+            <center><button class="characterCardButton" id="character3">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton3">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="character4.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">byngve</h1></center>
+            <center><h1 class="characterCardText">6 fpc</h1></center>
+            <center><h1 class="characterCardText">8000</h1></center>
+            <center><button class="characterCardButton" id="character4">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton4">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="character5.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">nulla burrtas</h1></center>
+            <center><h1 class="characterCardText">8 fpc</h1></center>
+            <center><h1 class="characterCardText">20000</h1></center>
+            <center><button class="characterCardButton" id="character5">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton5">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="character6.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">skrim cid</h1></center>
+            <center><h1 class="characterCardText">10 fpc</h1></center>
+            <center><h1 class="characterCardText">45000</h1></center>
+            <center><button class="characterCardButton" id="character6">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton6">EKVIP</button></center>
+        </div>
+        
+        </div></center>
 
-<div class="characterCard">
-    <center><img src="character5.png" class="characterCardProfile"></center>
-    <center><h1 class="characterCardText">nulla burrtas</h1></center>
-    <center><h1 class="characterCardText">8 fpc</h1></center>
-    <center><h1 class="characterCardText">20000</h1></center>
-    <center><button class="characterCardButton" id="character5">PARCHIS</button></center>
-    <center><button class="characterCardEquipButton" id="equipButton5">EKVIP</button></center>
-</div>
+ 
 
-<div class="characterCard">
-    <center><img src="character6.png" class="characterCardProfile"></center>
-    <center><h1 class="characterCardText">skrim cid</h1></center>
-    <center><h1 class="characterCardText">10 fpc</h1></center>
-    <center><h1 class="characterCardText">45000</h1></center>
-    <center><button class="characterCardButton" id="character6">PARCHIS</button></center>
-    <center><button class="characterCardEquipButton" id="equipButton6">EKVIP</button></center>
-</div>
 
-</div></center>
 
 
 <center><div id="test">
@@ -720,6 +812,50 @@ body {
 
 
 
+// Function to show the reminder popup
+function showTimeUntilUpdate() {
+    const announcement = document.getElementById('announcement');
+    const reminderAudio = new Audio('reminderSave.mp3');
+    announcement.style.top = '50px'; // Set the top position to show the popup
+    reminderAudio.play();
+
+    // Hide the popup after 3 seconds (3000 milliseconds)
+    setTimeout(function() {
+        announcement.style.top = '-601px'; // Set the top position to hide the popup
+    }, 5100);
+}
+
+
+
+
+const targetDate = new Date("2023-10-20T16:20:00");
+const announcementText = document.getElementById('text');
+
+function updateTimer() {
+    const currentTime = new Date();
+    const timeUntilUpdate = targetDate - currentTime;
+
+    if (timeUntilUpdate <= 0) {
+        announcementText.textContent = "gëm äpdëtëd";
+    } else {
+        const days = Math.floor(timeUntilUpdate / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeUntilUpdate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeUntilUpdate % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeUntilUpdate % (1000 * 60)) / 1000);
+
+        announcementText.textContent = `täjm üntÿl gëm äpdëtë: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+}
+
+// Call the updateTimer function immediately to display the initial time
+updateTimer();
+
+// Update the timer every second
+setInterval(updateTimer, 1000);
+
+
+
+
     
 
 
@@ -891,17 +1027,13 @@ button.addEventListener('click', function(event) {
 function showReminderPopup() {
     const reminderPopup = document.getElementById('reminderPopup');
     const reminderAudio = new Audio('reminderSave.mp3');
-    reminderPopup.style.top = '50px'; // Set the top position to show the popup
+    reminderPopup.style.top = '50px';
     reminderAudio.play();
-
-    // Hide the popup after 3 seconds (3000 milliseconds)
     setTimeout(function() {
-        reminderPopup.style.top = '-601px'; // Set the top position to hide the popup
+        reminderPopup.style.top = '-601px';
     }, 3000);
 }
-
-// Set a timer to show the popup every 5 minutes
-setInterval(showReminderPopup, 60000); // 300000 milliseconds = 5 minutes
+setInterval(showReminderPopup, 60000);
 
 
 
@@ -940,7 +1072,6 @@ const purchaseButton11 = document.getElementById('character11');
 
 const melle = document.querySelector('button#character12.characterCardButton');
 const purchaseButton12 = document.getElementById('character12');
-
 
 const kencarson = document.querySelector('button#character13.characterCardButton');
 const purchaseButton13 = document.getElementById('character13');
@@ -1027,6 +1158,13 @@ savePurchasedCharacters(purchasedCharacters);
 xianliButton.addEventListener("click", function() {
     const requiredCookies = 1250;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character2.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1035,7 +1173,13 @@ xianliButton.addEventListener("click", function() {
         xianliButton.disabled = true;
         equipButton2.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton2 = document.getElementById("equipButton2");
@@ -1044,11 +1188,23 @@ xianliButton.addEventListener("click", function() {
 equipButton2.addEventListener("click", function() {
     const equippedCharacterImage = "BAGT";
     if (purchaseButton2.textContent.includes(equippedCharacterImage)) {
-        alert("ekvipid kiriktir");
+        const popup = document.getElementById('equipPopup');
+        const equippedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        equippedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         equipButton2.disabled = false;
         img.src = 'character2.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1057,6 +1213,13 @@ equipButton2.addEventListener("click", function() {
 bart.addEventListener("click", function() {
     const requiredCookies = 4500;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character3.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1065,7 +1228,13 @@ bart.addEventListener("click", function() {
         bart.disabled = true;
         equipButton3.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton3 = document.getElementById("equipButton3");
@@ -1074,11 +1243,23 @@ bart.addEventListener("click", function() {
 equipButton3.addEventListener("click", function() {
     const equippedCharacterImage = "BAGT";
     if (purchaseButton3.textContent.includes(equippedCharacterImage)) {
-        alert("ekvipid kiriktir");
+        const popup = document.getElementById('equipPopup');
+        const equippedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        equippedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         equipButton3.disabled = false;
         img.src = 'character3.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1087,6 +1268,13 @@ equipButton3.addEventListener("click", function() {
 yngve.addEventListener("click", function() {
     const requiredCookies = 8000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character4.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1095,7 +1283,13 @@ yngve.addEventListener("click", function() {
         yngve.disabled = true;
         equipButton4.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton4 = document.getElementById("equipButton4");
@@ -1108,7 +1302,13 @@ equipButton4.addEventListener("click", function() {
         equipButton4.disabled = false;
         img.src = 'character4.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1118,6 +1318,13 @@ equipButton4.addEventListener("click", function() {
 pontus.addEventListener("click", function() {
     const requiredCookies = 20000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character5.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1126,7 +1333,13 @@ pontus.addEventListener("click", function() {
         pontus.disabled = true;
         equipButton5.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton5 = document.getElementById("equipButton5");
@@ -1139,7 +1352,13 @@ equipButton5.addEventListener("click", function() {
         equipButton5.disabled = false;
         img.src = 'character5.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1147,6 +1366,13 @@ equipButton5.addEventListener("click", function() {
 screamingkid.addEventListener("click", function() {
     const requiredCookies = 45000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character6.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1155,7 +1381,13 @@ screamingkid.addEventListener("click", function() {
         screamingkid.disabled = true;
         equipButton6.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton6 = document.getElementById("equipButton6");
@@ -1168,7 +1400,13 @@ equipButton6.addEventListener("click", function() {
         equipButton6.disabled = false;
         img.src = 'character6.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1177,6 +1415,13 @@ equipButton6.addEventListener("click", function() {
 melvin.addEventListener("click", function() {
     const requiredCookies = 60000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character7.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1185,7 +1430,13 @@ melvin.addEventListener("click", function() {
         melvin.disabled = true;
         equipButton7.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton7 = document.getElementById("equipButton7");
@@ -1198,7 +1449,13 @@ equipButton7.addEventListener("click", function() {
         equipButton7.disabled = false;
         img.src = 'character7.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1206,6 +1463,13 @@ equipButton7.addEventListener("click", function() {
 timeskipyngve.addEventListener("click", function() {
     const requiredCookies = 100000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character8.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1214,7 +1478,13 @@ timeskipyngve.addEventListener("click", function() {
         timeskipyngve.disabled = true;
         equipButton8.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton8 = document.getElementById("equipButton8");
@@ -1227,7 +1497,13 @@ equipButton8.addEventListener("click", function() {
         equipButton8.disabled = false;
         img.src = 'character8.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1236,6 +1512,13 @@ equipButton8.addEventListener("click", function() {
 emo.addEventListener("click", function() {
     const requiredCookies = 0.01;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character9.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1244,7 +1527,13 @@ emo.addEventListener("click", function() {
         emo.disabled = true;
         equipButton9.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton9 = document.getElementById("equipButton9");
@@ -1257,7 +1546,13 @@ equipButton9.addEventListener("click", function() {
         equipButton9.disabled = false;
         img.src = 'character9.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1267,6 +1562,13 @@ equipButton9.addEventListener("click", function() {
 nils.addEventListener("click", function() {
     const requiredCookies = 140000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character10.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1275,7 +1577,13 @@ nils.addEventListener("click", function() {
         nils.disabled = true;
         equipButton10.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton10 = document.getElementById("equipButton10");
@@ -1288,7 +1596,13 @@ equipButton10.addEventListener("click", function() {
         equipButton10.disabled = false;
         img.src = 'character10.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1297,6 +1611,13 @@ equipButton10.addEventListener("click", function() {
 ginger.addEventListener("click", function() {
     const requiredCookies = 180000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character11.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1305,7 +1626,13 @@ ginger.addEventListener("click", function() {
         ginger.disabled = true;
         equipButton11.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton11 = document.getElementById("equipButton11");
@@ -1318,7 +1645,13 @@ equipButton11.addEventListener("click", function() {
         equipButton11.disabled = false;
         img.src = 'character11.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1326,6 +1659,13 @@ equipButton11.addEventListener("click", function() {
 melle.addEventListener("click", function() {
     const requiredCookies = 215000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "character12.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1334,7 +1674,13 @@ melle.addEventListener("click", function() {
         melle.disabled = true;
         equipButton12.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton12 = document.getElementById("equipButton12");
@@ -1347,7 +1693,13 @@ equipButton12.addEventListener("click", function() {
         equipButton12.disabled = false;
         img.src = 'character12.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1358,6 +1710,13 @@ equipButton12.addEventListener("click", function() {
 kencarson.addEventListener("click", function() {
     const requiredCookies = 425000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "kencarson.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1366,7 +1725,13 @@ kencarson.addEventListener("click", function() {
         kencarson.disabled = true;
         equipButton13.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton13 = document.getElementById("equipButton13");
@@ -1379,7 +1744,13 @@ equipButton13.addEventListener("click", function() {
         equipButton13.disabled = false;
         img.src = 'kencarson.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1388,6 +1759,13 @@ equipButton13.addEventListener("click", function() {
 carti.addEventListener("click", function() {
     const requiredCookies = 900000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "playboicarti.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1396,7 +1774,13 @@ carti.addEventListener("click", function() {
         carti.disabled = true;
         equipButton14.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton14 = document.getElementById("equipButton14");
@@ -1409,7 +1793,13 @@ equipButton14.addEventListener("click", function() {
         equipButton14.disabled = false;
         img.src = 'playboicarti.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1417,6 +1807,13 @@ equipButton14.addEventListener("click", function() {
 cent.addEventListener("click", function() {
     const requiredCookies = 1800000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "50cent.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1425,7 +1822,13 @@ cent.addEventListener("click", function() {
         cent.disabled = true;
         equipButton15.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton15 = document.getElementById("equipButton15");
@@ -1438,7 +1841,13 @@ equipButton15.addEventListener("click", function() {
         equipButton15.disabled = false;
         img.src = '50cent.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1446,6 +1855,13 @@ equipButton15.addEventListener("click", function() {
 centralcee.addEventListener("click", function() {
     const requiredCookies = 3000000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "centralcee.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1454,7 +1870,13 @@ centralcee.addEventListener("click", function() {
         centralcee.disabled = true;
         equipButton16.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton16 = document.getElementById("equipButton16");
@@ -1467,7 +1889,13 @@ equipButton16.addEventListener("click", function() {
         equipButton16.disabled = false;
         img.src = 'centralcee.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1480,6 +1908,13 @@ equipButton16.addEventListener("click", function() {
 kanye.addEventListener("click", function() {
     const requiredCookies = 10000000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "ye.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1488,7 +1923,13 @@ kanye.addEventListener("click", function() {
         kanye.disabled = true;
         equipButton17.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton17 = document.getElementById("equipButton17");
@@ -1501,13 +1942,26 @@ equipButton17.addEventListener("click", function() {
         equipButton17.disabled = false;
         img.src = 'ye.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
 destroylonely.addEventListener("click", function() {
     const requiredCookies = 25000000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "destroylonely.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1516,7 +1970,13 @@ destroylonely.addEventListener("click", function() {
         destroylonely.disabled = true;
         equipButton18.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton18 = document.getElementById("equipButton18");
@@ -1529,13 +1989,26 @@ equipButton18.addEventListener("click", function() {
         equipButton18.disabled = false;
         img.src = 'destroylonely.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
 jon.addEventListener("click", function() {
     const requiredCookies = 55000000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "johnny.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1544,7 +2017,13 @@ jon.addEventListener("click", function() {
         jon.disabled = true;
         equipButton19.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton19 = document.getElementById("equipButton19");
@@ -1557,7 +2036,13 @@ equipButton19.addEventListener("click", function() {
         equipButton19.disabled = false;
         img.src = 'johnny.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1565,6 +2050,13 @@ equipButton19.addEventListener("click", function() {
 lana.addEventListener("click", function() {
     const requiredCookies = 70000000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "lana.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1573,7 +2065,13 @@ lana.addEventListener("click", function() {
         lana.disabled = true;
         equipButton20.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton20 = document.getElementById("equipButton20");
@@ -1586,7 +2084,13 @@ equipButton20.addEventListener("click", function() {
         equipButton20.disabled = false;
         img.src = 'lana.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1594,6 +2098,13 @@ equipButton20.addEventListener("click", function() {
 pen.addEventListener("click", function() {
     const requiredCookies = 100000000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "pen.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1602,7 +2113,13 @@ pen.addEventListener("click", function() {
         pen.disabled = true;
         equipButton21.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton21 = document.getElementById("equipButton21");
@@ -1615,7 +2132,13 @@ equipButton21.addEventListener("click", function() {
         equipButton21.disabled = false;
         img.src = 'pen.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1623,6 +2146,13 @@ equipButton21.addEventListener("click", function() {
 justin.addEventListener("click", function() {
     const requiredCookies = 110000000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "justin.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1631,7 +2161,13 @@ justin.addEventListener("click", function() {
         justin.disabled = true;
         equipButton22.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton22 = document.getElementById("equipButton22");
@@ -1644,7 +2180,13 @@ equipButton22.addEventListener("click", function() {
         equipButton22.disabled = false;
         img.src = 'justin.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1654,6 +2196,13 @@ equipButton22.addEventListener("click", function() {
 pippi.addEventListener("click", function() {
     const requiredCookies = 125000000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "pippi.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1662,7 +2211,13 @@ pippi.addEventListener("click", function() {
         pippi.disabled = true;
         equipButton23.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton23 = document.getElementById("equipButton23");
@@ -1675,7 +2230,13 @@ equipButton23.addEventListener("click", function() {
         equipButton23.disabled = false;
         img.src = 'pippi.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1686,6 +2247,13 @@ equipButton23.addEventListener("click", function() {
 ronaldo.addEventListener("click", function() {
     const requiredCookies = 150000000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "ronaldo.png";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1694,7 +2262,13 @@ ronaldo.addEventListener("click", function() {
         ronaldo.disabled = true;
         equipButton24.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton24 = document.getElementById("equipButton24");
@@ -1707,7 +2281,13 @@ equipButton24.addEventListener("click", function() {
         equipButton24.disabled = false;
         img.src = 'ronaldo.png';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
@@ -1715,6 +2295,13 @@ equipButton24.addEventListener("click", function() {
 luhcalmfit.addEventListener("click", function() {
     const requiredCookies = 250000000;
     if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
         img.src = "luhcalmfit.gif";
         cookieValue -= requiredCookies;
         cookieValueElement.textContent = cookieValue;
@@ -1723,7 +2310,13 @@ luhcalmfit.addEventListener("click", function() {
         luhcalmfit.disabled = true;
         equipButton25.disabled = true;
     } else {
-        alert("jur bruk git mar faks");
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
     }
 
     const equipButton25 = document.getElementById("equipButton25");
@@ -1736,7 +2329,13 @@ equipButton25.addEventListener("click", function() {
         equipButton25.disabled = false;
         img.src = 'luhcalmfit.gif';
     } else {
-        alert("bai da fakin kiriktir ju brukie");
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
     }
 });
 
