@@ -455,34 +455,2150 @@ body {
 
     </style> 
 
-<center><h1 style="color: lime; font-family: 'Poppins';">fakavajrus shutdown😢</h1></center>
-<center><p style="color: lime; font-family: 'Poppins'; font-size: 12px;">dont worry! a new game will come out in </p></center>
-<center><div id="countdown"></div></center>
-<center><p style="color: lime; font-family: 'Poppins'; font-size: 12px;">may da progris rest in piss💀🙏</p></center>
-<center><p style="color: lime; font-family: 'Poppins'; font-size: 12px;">new game mach better🥶🔫🦅</p></center>
-<center><p style="color: lime; font-family: 'Poppins'; font-size: 2px;">[sakavajrus]</p></center>
+<center><div class="reminder" id="reminderPopup">
+    <h1 class="testtext" style="font-size: 4vh;">reminder to save your characters before exiting!</h1>
+</div></center>
+
+<center><div class="reminder" id="reminderPopup" style="top: 2%;">
+    <h1 class="testtext" style="font-size: 4vh;">PLAY SAKAVAJRUS</h1>
+</div></center>
+
+<center><div class="popup" id="purchasePopup">
+    <h1 class="testtext" style="font-size: 4vh;">sakasex bagt!!!!!!</h1>
+</div></center>
+
+<center><div class="popupbrokie" id="purchaseDeniedPopup">
+    <h1 class="testtext" style="font-size: 4vh;">brok</h1>
+</div></center>
+
+<center><div class="popupequip" id="equipPopup">
+    <h1 class="testtext" style="font-size: 4vh;">ekvipd!!!</h1>
+</div></center>
+
+<center><div class="popupequip" id="equipPopupDenied">
+    <h1 class="testtext" style="font-size: 4vh;">bai da kiriktir</h1>
+</div></center>
+
+
+
+<audio id="coinAudio" src="coin.wav"></audio>
+<audio id="backgroundMusiclol" src="backgroundMusic.mp3"></audio>
+<center><div style="background: rgb(30, 30, 30); width: 100%; border-radius: 9px;"><center><a href="code-characters.html"><button class="normalButton" id="codeCharacters">kod kiriktirs</button></a>
+<a href="fun-codes.html"><button class="normalButton" id="funCodes">fan kod</button></a>
+<button class="normalButton" id="funCodes">deli riward</button>
+<button class="normalButton" id="saveCharacter">pris to sev kiriktir</button></center></center></div></center>
+<center>
+<center><p class="productCost" style="font-size: 14px;">chet kod</p></center>
+<center><input class="inputtype" id="nameInput"></center>
+<center><div style="width: 50%; height: 2px; background-color: rgb(205, 205, 205); margin-top: 1.5vh; border-radius: 120px;"></div></center>
+
+
+
+<center><h1 class="testtext">faks</h1></center>
+
+
+<center><h2 class="testtext" id="cookieValue" oninput="saveToLocalStorage()">0</h2></center>
+<center><img id="randomguy" class="images" src="character1.png"></center>
+<center><button class="fakthebutton" id="fakthebutton">pris to fak</button>
+
+
+
+
+
+    <center><div id="test">
+        <div class="characterCard">
+            <center><img src="character1.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">mario</h1></center>
+            <center><h1 class="characterCardText">1 fpc</h1></center>
+            <center><h1 class="characterCardText">FRI</h1></center>
+            <center><button class="characterCardButton" id="character1">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton1">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="character2.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">chin lu</h1></center>
+            <center><h1 class="characterCardText">2 fpc</h1></center>
+            <center><h1 class="characterCardText">1250</h1></center>
+            <center><button class="characterCardButton" id="character2">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton2">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="character3.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">bark</h1></center>
+            <center><h1 class="characterCardText">4 fpc</h1></center>
+            <center><h1 class="characterCardText">4500</h1></center>
+            <center><button class="characterCardButton" id="character3">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton3">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="character4.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">byngve</h1></center>
+            <center><h1 class="characterCardText">6 fpc</h1></center>
+            <center><h1 class="characterCardText">8000</h1></center>
+            <center><button class="characterCardButton" id="character4">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton4">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="character5.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">nulla burrtas</h1></center>
+            <center><h1 class="characterCardText">8 fpc</h1></center>
+            <center><h1 class="characterCardText">20000</h1></center>
+            <center><button class="characterCardButton" id="character5">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton5">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="character6.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">skrim cid</h1></center>
+            <center><h1 class="characterCardText">10 fpc</h1></center>
+            <center><h1 class="characterCardText">45000</h1></center>
+            <center><button class="characterCardButton" id="character6">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton6">EKVIP</button></center>
+        </div>
+        
+        </div></center>
+
+ 
+
+
+
+
+<center><div id="test">
+    <div class="characterCard">
+        <center><img src="character7.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">imo milvin</h1></center>
+        <center><h1 class="characterCardText">12 fpc</h1></center>
+        <center><h1 class="characterCardText">60000</h1></center>
+        <center><button class="characterCardButton" id="character7">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton7">EKVIP</button></center>
+    </div>
+    
+    <div class="characterCard">
+        <center><img src="character8.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">tajmskyp bangvi</h1></center>
+        <center><h1 class="characterCardText">14 fpc</h1></center>
+        <center><h1 class="characterCardText">100000</h1></center>
+        <center><button class="characterCardButton" id="character8">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton8">EKVIP</button></center>
+    </div>
+    
+    <div class="characterCard">
+        <center><img src="character9.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">imo milvin sistar</h1></center>
+        <center><h1 class="characterCardText">0.1 fpc</h1></center>
+        <center><h1 class="characterCardText">0.01</h1></center>
+        <center><button class="characterCardButton" id="character9">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton9">EKVIP</button></center>
+    </div>
+    
+    <div class="characterCard">
+        <center><img src="character10.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">nyls</h1></center>
+        <center><h1 class="characterCardText">16 fpc</h1></center>
+        <center><h1 class="characterCardText">140000</h1></center>
+        <center><button class="characterCardButton" id="character10">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton10">EKVIP</button></center>
+    </div>
+    
+    <div class="characterCard">
+        <center><img src="character11.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">jinjer</h1></center>
+        <center><h1 class="characterCardText">18 fpc</h1></center>
+        <center><h1 class="characterCardText">180000</h1></center>
+        <center><button class="characterCardButton" id="character11">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton11">EKVIP</button></center>
+    </div>
+    
+    <div class="characterCard">
+        <center><img src="character12.png" class="characterCardProfile"></center>
+        <center><h1 class="characterCardText">mali</h1></center>
+        <center><h1 class="characterCardText">20 fpc</h1></center>
+        <center><h1 class="characterCardText">215000</h1></center>
+        <center><button class="characterCardButton" id="character12">PARCHIS</button></center>
+        <center><button class="characterCardEquipButton" id="equipButton12">EKVIP</button></center>
+    </div>
+    
+    </div></center>
+
+
+
+
+
+
+
+
+    <center><div id="test">
+        <div class="characterCard">
+            <center><img src="kencarson.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">kin karson</h1></center>
+            <center><h1 class="characterCardText">30 fpc</h1></center>
+            <center><h1 class="characterCardText">425000</h1></center>
+            <center><button class="characterCardButton" id="character13">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton13">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="playboicarti.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">plaiguy cartman</h1></center>
+            <center><h1 class="characterCardText">50 fpc</h1></center>
+            <center><h1 class="characterCardText">900000</h1></center>
+            <center><button class="characterCardButton" id="character14">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton14">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="50cent.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">25 cent</h1></center>
+            <center><h1 class="characterCardText">100 fpc</h1></center>
+            <center><h1 class="characterCardText">1800000</h1></center>
+            <center><button class="characterCardButton" id="character15">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton15">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="centralcee.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">outer cee</h1></center>
+            <center><h1 class="characterCardText">275 fpc</h1></center>
+            <center><h1 class="characterCardText">3000000</h1></center>
+            <center><button class="characterCardButton" id="character16">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton16">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="ye.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">ye</h1></center>
+            <center><h1 class="characterCardText">400 fpc</h1></center>
+            <center><h1 class="characterCardText">10000000</h1></center>
+            <center><button class="characterCardButton" id="character17">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton17">EKVIP</button></center>
+        </div>
+        
+        <div class="characterCard">
+            <center><img src="destroylonely.png" class="characterCardProfile"></center>
+            <center><h1 class="characterCardText">fakkin lonli</h1></center>
+            <center><h1 class="characterCardText">875 fpc</h1></center>
+            <center><h1 class="characterCardText">25000000</h1></center>
+            <center><button class="characterCardButton" id="character18">PARCHIS</button></center>
+            <center><button class="characterCardEquipButton" id="equipButton18">EKVIP</button></center>
+        </div>
+        
+        </div></center>
+
+
+
+
+
+
+        <center><div id="test">
+
+
+
+
+            <div class="characterCard">
+                <center><img src="johnny.png" class="characterCardProfile"></center>
+                <center><h1 class="characterCardText">jonni tezt</h1></center>
+                <center><h1 class="characterCardText">1250 fpc</h1></center>
+                <center><h1 class="characterCardText">55000000</h1></center>
+                <center><button class="characterCardButton" id="character19">PARCHIS</button></center>
+                <center><button class="characterCardEquipButton" id="equipButton19">EKVIP</button></center>
+            </div>
+
+            <div class="characterCard">
+                <center><img src="lana.png" class="characterCardProfile"></center>
+                <center><h1 class="characterCardText">lana</h1></center>
+                <center><h1 class="characterCardText">1500 fpc</h1></center>
+                <center><h1 class="characterCardText">70000000</h1></center>
+                <center><button class="characterCardButton" id="character20">PARCHIS</button></center>
+                <center><button class="characterCardEquipButton" id="equipButton20">EKVIP</button></center>
+            </div>
+
+            <div class="characterCard">
+                <center><img src="pen.png" class="characterCardProfile"></center>
+                <center><h1 class="characterCardText">pen</h1></center>
+                <center><h1 class="characterCardText">1800 fpc</h1></center>
+                <center><h1 class="characterCardText">100000000</h1></center>
+                <center><button class="characterCardButton" id="character21">PARCHIS</button></center>
+                <center><button class="characterCardEquipButton" id="equipButton21">EKVIP</button></center>
+            </div>
+
+
+            <div class="characterCard">
+                <center><img src="justin.png" class="characterCardProfile"></center>
+                <center><h1 class="characterCardText">jast in</h1></center>
+                <center><h1 class="characterCardText">2525 fpc</h1></center>
+                <center><h1 class="characterCardText">110000000</h1></center>
+                <center><button class="characterCardButton" id="character22">PARCHIS</button></center>
+                <center><button class="characterCardEquipButton" id="equipButton22">EKVIP</button></center>
+            </div>
+            
+
+
+            <div class="characterCard">
+                <center><img src="pippi.png" class="characterCardProfile"></center>
+                <center><h1 class="characterCardText">kaka</h1></center>
+                <center><h1 class="characterCardText">2750 fpc</h1></center>
+                <center><h1 class="characterCardText">125000000</h1></center>
+                <center><button class="characterCardButton" id="character23">PARCHIS</button></center>
+                <center><button class="characterCardEquipButton" id="equipButton23">EKVIP</button></center>
+            </div>
+
+
+
+            <div class="characterCard">
+                <center><img src="ronaldo.png" class="characterCardProfile"></center>
+                <center><h1 class="characterCardText">longrandlo</h1></center>
+                <center><h1 class="characterCardText">3000 fpc</h1></center>
+                <center><h1 class="characterCardText">150000000</h1></center>
+                <center><button class="characterCardButton" id="character24">PARCHIS</button></center>
+                <center><button class="characterCardEquipButton" id="equipButton24">EKVIP</button></center>
+            </div>
+
+
+        </div></center>
+
+
+
+
+
+
+
+
+
+
+
+        <center><div id="test">
+
+
+            <div class="specialCard">
+                <center><img src="luhcalmfit.gif" class="characterCardProfile"></center>
+                <center><h1 class="specialCardText">luh calm fit</h1></center>
+                <center><h1 class="specialCardText">6000 fpc</h1></center>
+                <center><h1 class="specialCardText">250000000</h1></center>
+                <center><button class="specialCardButton" id="character25">PARCHIS</button></center>
+                <center><button class="specialCardEquipButton" id="equipButton25">EKVIP</button></center>
+            </div>
+         
+
+
+
+        </div></center>
+
+
+        <center><p class="productCost" style="font-size: 2vh; margin-top: 100px;">mor suun - request kiriktirs to deo</p></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div style="width: 100%; height: 2px; background-color: rgb(205, 205, 205); margin-top: 200px; border-radius: 120px;"></div>
+    <center><p class="productCost" style="font-size: 2vh;">deo©</p></center>
+    <center><p class="productCost" style="font-size: 1.5vh;">yf ju capy samtin aj will fakin su ju end fak jur matter</p></center>
+    <center><p class="productCost" style="font-size: 1.5vh;">copirigt 2320</p></center>
 
 <script>
-  const countDownDate = new Date("January 3, 2093 00:00:00").getTime();
-
-  const countdownElement = document.getElementById('countdown');
-  countdownElement.style.color = 'lime';
-  countdownElement.style.fontFamily = 'Poppins';
 
 
-    const countdownInterval = setInterval(function() {
-    const now = new Date().getTime();
-    const distance = countDownDate - now;
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    countdownElement.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-    if (distance < 0) {
-      clearInterval(countdownInterval);
-      countdownElement.innerHTML = "EXPIRED";
+
+// Function to show the reminder popup
+function showTimeUntilUpdate() {
+    const announcement = document.getElementById('announcement');
+    const reminderAudio = new Audio('reminderSave.mp3');
+    announcement.style.top = '50px'; // Set the top position to show the popup
+    reminderAudio.play();
+
+    // Hide the popup after 3 seconds (3000 milliseconds)
+    setTimeout(function() {
+        announcement.style.top = '-601px'; // Set the top position to hide the popup
+    }, 5100);
+}
+
+
+
+
+const targetDate = new Date("2023-10-20T16:20:00");
+const announcementText = document.getElementById('text');
+
+function updateTimer() {
+    const currentTime = new Date();
+    const timeUntilUpdate = targetDate - currentTime;
+
+    if (timeUntilUpdate <= 0) {
+        announcementText.textContent = "gëm äpdëtëd";
+    } else {
+        const days = Math.floor(timeUntilUpdate / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeUntilUpdate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeUntilUpdate % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeUntilUpdate % (1000 * 60)) / 1000);
+
+        announcementText.textContent = `täjm üntÿl gëm äpdëtë: ${days}d ${hours}h ${minutes}m ${seconds}s`;
     }
-  }, 1000);
+}
+
+// Call the updateTimer function immediately to display the initial time
+updateTimer();
+
+// Update the timer every second
+setInterval(updateTimer, 1000);
+
+
+
+
+    
+
+
+const button3 = document.querySelector("button#balls.fakthebutton");
+
+
+const img = document.getElementById("randomguy");
+const cookieValueElement = document.getElementById("cookieValue");
+const coinAudio = document.getElementById("coinAudio");
+let cookieValue = parseInt(localStorage.getItem('cookieValue')) || 0;
+let spacebarPressed = false;
+cookieValueElement.textContent = cookieValue;
+
+// Object to store character images and their corresponding cookie values
+const characterValues = {
+    "character1.png": 1,
+    "character2.png": 2,
+    "character3.png": 4,
+    "character4.png": 6,
+    "character5.png": 8,
+    "character6.png": 10,
+    "character7.png": 12,
+    "character8.png": 14,
+    "character9.png": 0.1,
+    "character10.png": 16,
+    "character11.png": 18,
+    "character12.png": 20,
+    "yeat.gif": 1200,
+    "eminem.gif": 1000,
+    "vape.png": -100,
+    "gyatt.png": 100,
+    "chiefkeef.png": 30000,
+    "kencarson.png": 30,
+    "playboicarti.png": 50,
+    "50cent.png": 100,
+    "centralcee.png": 275,
+    "ye.png": 400,
+    "destroylonely.png": 875,
+    "69.gif": 69,
+    "johnny.png": 1250,
+    "lana.png": 1500,
+    "pen.png": 1800,
+    "justin.png": 2525,
+    "pippi.png": 2750,
+    "ronaldo.png": 3000,
+    "luhcalmfit.gif": 6000,
+    "randomGirl.png": 20000,
+    "rat.png": 200000
+
+};
+
+
+
+
+const SPACEBAR_DELAY_MS = 1; // Define the time interval (in milliseconds) between spacebar presses
+let lastSpacebarPressTime = 0;
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === " ") { // Check if the pressed key is the spacebar
+        const currentTime = Date.now();
+        
+        if (!spacebarPressed && currentTime - lastSpacebarPressTime >= SPACEBAR_DELAY_MS) {
+            // Allow spacebar press if it's not already pressed and the time interval has passed
+            spacebarPressed = true; // Set spacebarPressed to true
+            moveImageAndIncrementCookieValue(); // Execute your function
+            document.body.classList.add("scroll-lock"); // Add the "scroll-lock" class
+            lastSpacebarPressTime = currentTime; // Update the last press time
+        } else {
+            
+        }
+    }
+});
+
+document.addEventListener("keyup", (event) => {
+    if (event.key === " ") {
+        spacebarPressed = false;
+        document.body.classList.remove("scroll-lock"); // Remove the "scroll-lock" class when releasing the spacebar
+    }
+});
+
+
+const click = document.getElementById('fakthebutton')
+
+click.addEventListener("click", function() {
+moveImageAndIncrementCookieValue();
+});
+
+
+        // Function to save data to Local Storage
+        function saveData() {
+            var data = document.getElementById("dataInput").value;
+            localStorage.setItem("userData", data);
+            alert("Data saved to Local Storage!");
+        }
+
+        // Function to load data from Local Storage
+        function loadData() {
+            var data = localStorage.getItem("userData");
+            document.getElementById("displayData").textContent = "Data from Local Storage: " + data;
+        }
+
+        // Function to perform automatic licks and update the display
+function autoLick() {
+    const autoLicksPerSecond = 1; // Adjust the number of licks per second as needed
+    cookieValue += autoLicksPerSecond;
+    cookieValueElement.textContent = cookieValue;
+    localStorage.setItem('cookieValue', cookieValue);
+}
+
+// Set up an interval to run the autoLick function every second
+setInterval(autoLick, 1000); // 1000 milliseconds = 1 second
+
+    
+        function moveImageAndIncrementCookieValue() {
+    img.style.transform = "translateY(-30px)";
+    const characterImage = img.src.split("/").pop(); // Get the character image filename
+    const characterValue = characterValues[characterImage] || 0; // Get the cookie value from the object
+    cookieValue += characterValue;
+    cookieValueElement.textContent = cookieValue;
+    coinAudio.currentTime = 0;
+    coinAudio.play();
+    setTimeout(() => {
+        img.style.transform = "translateY(0)";
+    }, 300);
+    localStorage.setItem('cookieValue', cookieValue);
+}
+
+
+
+
+
+function savePurchasedCharacters(purchasedCharacters) {
+const charactersString = Array.from(purchasedCharacters).join(", ");
+localStorage.setItem("purchasedCharacters", charactersString);
+}
+
+function loadPurchasedCharacters() {
+const savedCharacters = localStorage.getItem("purchasedCharacters");
+return new Set(savedCharacters ? savedCharacters.split(", ") : []);
+}
+
+window.onload = function() {
+const purchasedCharacters = loadPurchasedCharacters();
+// Rest of your code here
+};
+
+const button = document.getElementById('fakthebutton');
+let lastClickTime = 0;
+const clickDelay = 23;
+button.addEventListener('click', function(event) {
+  const currentTime = new Date().getTime();
+  if (currentTime - lastClickTime < clickDelay) {
+    event.preventDefault();
+    alert('fakin chiiter stap ajuto klik');
+  } else {
+    lastClickTime = currentTime;
+    console.log('Button clicked!');
+  }
+});
+
+
+
+
+
+
+
+
+// Function to show the reminder popup
+function showReminderPopup() {
+    const reminderPopup = document.getElementById('reminderPopup');
+    const reminderAudio = new Audio('reminderSave.mp3');
+    reminderPopup.style.top = '50px';
+    reminderAudio.play();
+    setTimeout(function() {
+        reminderPopup.style.top = '-601px';
+    }, 3000);
+}
+setInterval(showReminderPopup, 60000);
+
+
+
+const marioButton = document.querySelector("button#character1.characterCardButton");
+const purchaseButton = document.getElementById("character1");
+
+const xianliButton = document.querySelector('button#character2.characterCardButton')
+const purchaseButton2 = document.getElementById("character2");
+
+const bart = document.querySelector('button#character3.characterCardButton')
+const purchaseButton3 = document.getElementById("character3");
+
+const yngve = document.querySelector('button#character4.characterCardButton');
+const purchaseButton4 = document.getElementById('character4');
+
+const pontus = document.querySelector('button#character5.characterCardButton');
+const purchaseButton5 = document.getElementById('character5');
+
+const screamingkid = document.querySelector('button#character6.characterCardButton');
+const purchaseButton6 = document.getElementById('character6');
+
+const melvin = document.querySelector('button#character7.characterCardButton');
+const purchaseButton7 = document.getElementById('character7');
+
+const timeskipyngve = document.querySelector('button#character8.characterCardButton');
+const purchaseButton8 = document.getElementById('character8');
+
+const emo = document.querySelector('button#character9.characterCardButton');
+const purchaseButton9 = document.getElementById('character9');
+
+const nils = document.querySelector('button#character10.characterCardButton');
+const purchaseButton10 = document.getElementById('character10');
+
+const ginger = document.querySelector('button#character11.characterCardButton');
+const purchaseButton11 = document.getElementById('character11');
+
+const melle = document.querySelector('button#character12.characterCardButton');
+const purchaseButton12 = document.getElementById('character12');
+
+const kencarson = document.querySelector('button#character13.characterCardButton');
+const purchaseButton13 = document.getElementById('character13');
+
+const carti = document.querySelector('button#character14.characterCardButton');
+const purchaseButton14 = document.getElementById('character14');
+
+const cent = document.querySelector('button#character15.characterCardButton');
+const purchaseButton15 = document.getElementById('character15');
+
+const centralcee = document.querySelector('button#character16.characterCardButton');
+const purchaseButton16 = document.getElementById('character16');
+
+const kanye = document.querySelector('button#character17.characterCardButton');
+const purchaseButton17 = document.getElementById('character17');
+
+const destroylonely = document.querySelector('button#character18.characterCardButton');
+const purchaseButton18 = document.getElementById('character18');
+
+const jon = document.querySelector('button#character19.characterCardButton');
+const purchaseButton19 = document.getElementById('character19');
+
+const lana = document.querySelector('button#character20.characterCardButton');
+const purchaseButton20 = document.getElementById('character20');
+
+const pen = document.querySelector('button#character21.characterCardButton');
+const purchaseButton21 = document.getElementById('character21');
+
+const justin = document.querySelector('button#character22.characterCardButton');
+const purchaseButton22 = document.getElementById('character22');
+
+const pippi = document.querySelector('button#character23.characterCardButton');
+const purchaseButton23 = document.getElementById('character23');
+
+const ronaldo = document.querySelector('button#character24.characterCardButton');
+const purchaseButton24 = document.getElementById('character24');
+
+const luhcalmfit = document.querySelector('button#character25.specialCardButton');
+const purchaseButton25 = document.getElementById('character25');
+
+
+
+
+
+
+marioButton.addEventListener("click", function() {
+    const requiredCookies = 0;
+    if (cookieValue >= requiredCookies) {
+        img.src = "character1.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton.textContent = "BAGT";
+        marioButton.disabled = true;
+        equipButton1.disabled = true;
+    } else {
+        alert("jur bruk git mar faks");
+    }
+
+    const equipButton1 = document.getElementById("equipButton1");
+});
+
+equipButton1.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton1.disabled = false;
+        img.src = 'character1.png';
+        const characterFilename = "character1.png"; // Replace this with the actual filename of the purchased character
+purchasedCharacters.add(characterFilename);
+savePurchasedCharacters(purchasedCharacters);
+    } else {
+        alert("bai da fakin kiriktir ju brukie");
+    }
+});
+
+
+
+
+
+
+
+
+xianliButton.addEventListener("click", function() {
+    const requiredCookies = 1250;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character2.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton2.textContent = "BAGT";
+        xianliButton.disabled = true;
+        equipButton2.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton2 = document.getElementById("equipButton2");
+});
+
+equipButton2.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton2.textContent.includes(equippedCharacterImage)) {
+        const popup = document.getElementById('equipPopup');
+        const equippedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        equippedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        equipButton2.disabled = false;
+        img.src = 'character2.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+bart.addEventListener("click", function() {
+    const requiredCookies = 4500;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character3.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton3.textContent = "BAGT";
+        bart.disabled = true;
+        equipButton3.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton3 = document.getElementById("equipButton3");
+});
+
+equipButton3.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton3.textContent.includes(equippedCharacterImage)) {
+        const popup = document.getElementById('equipPopup');
+        const equippedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        equippedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        equipButton3.disabled = false;
+        img.src = 'character3.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+yngve.addEventListener("click", function() {
+    const requiredCookies = 8000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character4.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton4.textContent = "BAGT";
+        yngve.disabled = true;
+        equipButton4.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton4 = document.getElementById("equipButton4");
+});
+
+equipButton4.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton4.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton4.disabled = false;
+        img.src = 'character4.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+
+pontus.addEventListener("click", function() {
+    const requiredCookies = 20000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character5.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton5.textContent = "BAGT";
+        pontus.disabled = true;
+        equipButton5.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton5 = document.getElementById("equipButton5");
+});
+
+equipButton5.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton5.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton5.disabled = false;
+        img.src = 'character5.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+screamingkid.addEventListener("click", function() {
+    const requiredCookies = 45000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character6.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton6.textContent = "BAGT";
+        screamingkid.disabled = true;
+        equipButton6.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton6 = document.getElementById("equipButton6");
+});
+
+equipButton6.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton6.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton6.disabled = false;
+        img.src = 'character6.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+melvin.addEventListener("click", function() {
+    const requiredCookies = 60000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character7.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton7.textContent = "BAGT";
+        melvin.disabled = true;
+        equipButton7.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton7 = document.getElementById("equipButton7");
+});
+
+equipButton7.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton7.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton7.disabled = false;
+        img.src = 'character7.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+timeskipyngve.addEventListener("click", function() {
+    const requiredCookies = 100000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character8.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton8.textContent = "BAGT";
+        timeskipyngve.disabled = true;
+        equipButton8.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton8 = document.getElementById("equipButton8");
+});
+
+equipButton8.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton8.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton8.disabled = false;
+        img.src = 'character8.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+emo.addEventListener("click", function() {
+    const requiredCookies = 0.01;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character9.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton9.textContent = "BAGT";
+        emo.disabled = true;
+        equipButton9.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton9 = document.getElementById("equipButton9");
+});
+
+equipButton9.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton9.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton9.disabled = false;
+        img.src = 'character9.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+
+nils.addEventListener("click", function() {
+    const requiredCookies = 140000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character10.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton10.textContent = "BAGT";
+        nils.disabled = true;
+        equipButton10.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton10 = document.getElementById("equipButton10");
+});
+
+equipButton10.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton10.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton10.disabled = false;
+        img.src = 'character10.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+ginger.addEventListener("click", function() {
+    const requiredCookies = 180000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character11.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton11.textContent = "BAGT";
+        ginger.disabled = true;
+        equipButton11.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton11 = document.getElementById("equipButton11");
+});
+
+equipButton11.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton11.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton11.disabled = false;
+        img.src = 'character11.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+melle.addEventListener("click", function() {
+    const requiredCookies = 215000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "character12.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton12.textContent = "BAGT";
+        melle.disabled = true;
+        equipButton12.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton12 = document.getElementById("equipButton12");
+});
+
+equipButton12.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton12.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton12.disabled = false;
+        img.src = 'character12.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+
+
+kencarson.addEventListener("click", function() {
+    const requiredCookies = 425000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "kencarson.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton13.textContent = "BAGT";
+        kencarson.disabled = true;
+        equipButton13.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton13 = document.getElementById("equipButton13");
+});
+
+equipButton13.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton13.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton13.disabled = false;
+        img.src = 'kencarson.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+carti.addEventListener("click", function() {
+    const requiredCookies = 900000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "playboicarti.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton14.textContent = "BAGT";
+        carti.disabled = true;
+        equipButton14.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton14 = document.getElementById("equipButton14");
+});
+
+equipButton14.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton14.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton14.disabled = false;
+        img.src = 'playboicarti.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+cent.addEventListener("click", function() {
+    const requiredCookies = 1800000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "50cent.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton15.textContent = "BAGT";
+        cent.disabled = true;
+        equipButton15.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton15 = document.getElementById("equipButton15");
+});
+
+equipButton15.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton15.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton15.disabled = false;
+        img.src = '50cent.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+centralcee.addEventListener("click", function() {
+    const requiredCookies = 3000000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "centralcee.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton16.textContent = "BAGT";
+        centralcee.disabled = true;
+        equipButton16.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton16 = document.getElementById("equipButton16");
+});
+
+equipButton16.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton16.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton16.disabled = false;
+        img.src = 'centralcee.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+
+
+
+
+kanye.addEventListener("click", function() {
+    const requiredCookies = 10000000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "ye.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton17.textContent = "BAGT";
+        kanye.disabled = true;
+        equipButton17.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton17 = document.getElementById("equipButton17");
+});
+
+equipButton17.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton17.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton17.disabled = false;
+        img.src = 'ye.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+destroylonely.addEventListener("click", function() {
+    const requiredCookies = 25000000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "destroylonely.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton18.textContent = "BAGT";
+        destroylonely.disabled = true;
+        equipButton18.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton18 = document.getElementById("equipButton18");
+});
+
+equipButton18.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton18.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton18.disabled = false;
+        img.src = 'destroylonely.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+jon.addEventListener("click", function() {
+    const requiredCookies = 55000000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "johnny.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton19.textContent = "BAGT";
+        jon.disabled = true;
+        equipButton19.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton19 = document.getElementById("equipButton19");
+});
+
+equipButton19.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton19.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton19.disabled = false;
+        img.src = 'johnny.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+lana.addEventListener("click", function() {
+    const requiredCookies = 70000000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "lana.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton20.textContent = "BAGT";
+        lana.disabled = true;
+        equipButton20.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton20 = document.getElementById("equipButton20");
+});
+
+equipButton20.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton20.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton20.disabled = false;
+        img.src = 'lana.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+pen.addEventListener("click", function() {
+    const requiredCookies = 100000000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "pen.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton21.textContent = "BAGT";
+        pen.disabled = true;
+        equipButton21.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton21 = document.getElementById("equipButton21");
+});
+
+equipButton21.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton21.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton21.disabled = false;
+        img.src = 'pen.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+justin.addEventListener("click", function() {
+    const requiredCookies = 110000000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "justin.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton22.textContent = "BAGT";
+        justin.disabled = true;
+        equipButton22.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton22 = document.getElementById("equipButton22");
+});
+
+equipButton22.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton22.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton22.disabled = false;
+        img.src = 'justin.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+
+pippi.addEventListener("click", function() {
+    const requiredCookies = 125000000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "pippi.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton23.textContent = "BAGT";
+        pippi.disabled = true;
+        equipButton23.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton23 = document.getElementById("equipButton23");
+});
+
+equipButton23.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton23.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton23.disabled = false;
+        img.src = 'pippi.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+
+
+ronaldo.addEventListener("click", function() {
+    const requiredCookies = 150000000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "ronaldo.png";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton24.textContent = "BAGT";
+        ronaldo.disabled = true;
+        equipButton24.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton24 = document.getElementById("equipButton24");
+});
+
+equipButton24.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton24.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton24.disabled = false;
+        img.src = 'ronaldo.png';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+luhcalmfit.addEventListener("click", function() {
+    const requiredCookies = 250000000;
+    if (cookieValue >= requiredCookies) {
+        const popup = document.getElementById('purchasePopup');
+        const purchasedAudio = new Audio('reminderSave.mp3');
+        popup.style.top = '50px';
+        purchasedAudio.play();
+        setTimeout(function() {
+        popup.style.top = '-601px'; // Set the top position to hide the popup
+    }, 3000);
+        img.src = "luhcalmfit.gif";
+        cookieValue -= requiredCookies;
+        cookieValueElement.textContent = cookieValue;
+        localStorage.setItem("cookieValue", cookieValue);
+        purchaseButton25.textContent = "BAGT";
+        luhcalmfit.disabled = true;
+        equipButton25.disabled = true;
+    } else {
+        const popupbrok = document.getElementById('purchaseDeniedPopup');
+        const purchasedDeniedAudio = new Audio('brok.mp3');
+        popupbrok.style.top = '50px';
+        purchasedDeniedAudio.play();
+        setTimeout(function() {
+        popupbrok.style.top = '-601px';
+    }, 2000);
+    }
+
+    const equipButton25 = document.getElementById("equipButton25");
+});
+
+equipButton25.addEventListener("click", function() {
+    const equippedCharacterImage = "BAGT";
+    if (purchaseButton25.textContent.includes(equippedCharacterImage)) {
+        alert("ekvipid kiriktir");
+        equipButton25.disabled = false;
+        img.src = 'luhcalmfit.gif';
+    } else {
+        const popupequipdenie = document.getElementById('equipPopupDenied');
+        const equippedAudioDenied = new Audio('brok.mp3');
+        popupequipdenie.style.top = '50px';
+        equippedAudioDenied.play();
+        setTimeout(function() {
+        popupequipdenie.style.top = '-601px';
+    }, 2000);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Check if characters should be saved to local storage
+document.getElementById("saveCharacter").addEventListener("click", function() {
+    const characterButtons = document.querySelectorAll(".characterCardButton");
+
+    // Create an array to store the saved characters' IDs
+    const savedCharacterIds = [];
+
+    characterButtons.forEach(button => {
+        if (button.textContent === "BAGT") {
+            
+            const characterId = button.id.replace("character", "");
+            savedCharacterIds.push(characterId);
+        }
+    });
+
+    // Save the character IDs to local storage
+    localStorage.setItem("savedCharacterIds", JSON.stringify(savedCharacterIds));
+});
+
+
+
+
+// Check if characters should be loaded from local storage
+document.addEventListener("DOMContentLoaded", function() {
+    const savedCharacterIds = JSON.parse(localStorage.getItem("savedCharacterIds"));
+
+    if (savedCharacterIds) {
+        savedCharacterIds.forEach(characterId => {
+            const button = document.getElementById(`character${characterId}`);
+            if (button) {
+                button.textContent = "BAGT";
+                button.disabled = true;
+            }
+        });
+    }
+});
+
+
+
+
+
+const nameInput = document.getElementById('nameInput');
+
+// Load the saved name and devCodeUsed from localStorage (if they exist)
+nameInput.value = localStorage.getItem('savedName');
+let devCodeUsed = JSON.parse(localStorage.getItem('devCodeUsed')) || false;
+let bostUsed = JSON.parse(localStorage.getItem('bostUsed')) || false;
+let crihmuhhUsed = JSON.parse(localStorage.getItem('crihmuhhUsed')) || false;
+
+
+//codes
+
+nameInput.addEventListener('input', function() {
+  localStorage.setItem('savedName', nameInput.value);
+
+
+  if (nameInput.value === 'wide') {
+    img.style.width = '750px';
+  }
+
+  if (nameInput.value === 'big') {
+    img.style.width = '750px';
+    img.style.height = '750px';
+  }
+
+  if (nameInput.value === 'small') {
+    img.style.width = '128px';
+    img.style.height = '128px';
+  }
+
+  if (nameInput.value === 'round') {
+  const imgCards = document.querySelectorAll('img.characterCardProfile');
+  
+  imgCards.forEach(imgCard => {
+    imgCard.style.borderRadius = '50%'; // Sets border radius to make the image round
+    img.style.borderRadius = '50%';
+  });
+}
+
+
+
+  if (nameInput.value === 'ya yeat') {
+    const divCards = document.querySelectorAll('div.characterCard');
+    const yeatAudio = new Audio("yeat.mp3");
+    const body = document.body;
+    yeatAudio.play();
+    yeatAudio.volume = 1;
+    img.src = "yeat.gif";
+    body.style.background = "url('yeat.gif')";
+    body.style.backgroundSize = "fit";
+    divCards.forEach(divCard => {
+    divCard.style.background = "url('yeat.gif')";
+    nameInput.value = "";
+  });
+}
+
+if (nameInput.value === 'LOVE SOSA') {
+   const divCards = document.querySelectorAll('div.characterCard, div.specialCard');
+    const CKAudio = new Audio("chiefkeef.mp3");
+    const body = document.body;
+    CKAudio.play();
+    CKAudio.volume = 1;
+    img.src = "chiefkeef.png";
+    body.style.background = "url('chiefkeef.gif')";
+    body.style.backgroundSize = "fit";
+    divCards.forEach(divCard => {
+    divCard.style.background = "url('chiefkeef.gif')";
+    nameInput.value = "";
+  });
+}
+
+if (nameInput.value === 'eminem😎') {
+    const divCards = document.querySelectorAll('div.characterCard, div.specialCard');
+    const body = document.body;
+    img.src = "eminem.gif";
+    const eminemAudio = new Audio("eminem.mp3");
+    eminemAudio.play();
+    eminemAudio.volume = 1;
+    body.style.background = "url('eminem.gif')";
+    body.style.backgroundSize = "fit";
+    divCards.forEach(divCard => {
+    divCard.style.background = "url('eminem.gif')";
+    nameInput.value = "";
+  });
+}
+
+
+if (nameInput.value === 'luh girl') {
+    const divCards = document.querySelectorAll('div.characterCard, div.specialCard');
+    const body = document.body;
+    img.src = "randomGirl.png";
+    divCards.forEach(divCard => {
+    nameInput.value = "";
+  });
+}
+
+if (nameInput.value === 'luh ret') {
+    const divCards = document.querySelectorAll('div.characterCard, div.specialCard');
+    const body = document.body;
+    img.src = "rat.png";
+    divCards.forEach(divCard => {
+    nameInput.value = "";
+  });
+}
+
+if (nameInput.value === 'vape🤮') {
+    img.src = "vape.png";
+    nameInput.value = "";
+}
+if (nameInput.value === 'cancerstick🤮') {
+    img.src = "vape.png";
+    nameInput.value = "";
+}
+if (nameInput.value === 'gyatt😍') {
+    img.src = "gyatt.png";
+    nameInput.value = "";
+}
+if (nameInput.value === '69') {
+    const audio2 = new Audio('weird audio.mp3');
+    img.src = '69.gif';
+    img.style.width = '100vh';
+    img.style.height = '100vh';
+    audio2.play();
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    alert('69 activated!!! press control + R to cancel!');
+    nameInput.value = "";
+  }
+
+
+
+  if (nameInput.value === 'devCode🤑' && !devCodeUsed) {
+    cookieValue = cookieValue + 25000;
+    devCodeUsed = true;
+    alert('+25000 faks!!!!');
+    localStorage.setItem('devCodeUsed', JSON.stringify(devCodeUsed));
+    nameInput.value = "";
+  }
+  if (nameInput.value === 'cash') {
+    cookieValue = cookieValue + 1000000000000000000000;
+    nameInput.value = "";
+  }
+  if (nameInput.value === 'bost' && !bostUsed) {
+    cookieValue = cookieValue + 25000;
+    bostUsed = true;
+    alert('+25000 faks!!!!');
+    localStorage.setItem('bostUsed', JSON.stringify(bostUsed));
+    nameInput.value = "";
+  }
+  if (nameInput.value === 'crihmuhh' && !crihmuhhUsed) {
+    cookieValue = cookieValue + 100000;
+    crihmuhhUsed = true;
+    alert('+100000 faks!!!!!!!!!!!');
+    localStorage.setItem('crihmuhhUsed', JSON.stringify(crihmuhhUsed));
+    nameInput.value = "";
+  }
+
+  if (nameInput.value === 'risit') {
+    cookieValue = 0;
+    alert('risit camplit pris OK to cumtinju');
+    nameInput.value = "";
+  }
+
+});
+;
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
 </script>
 
 </body>
